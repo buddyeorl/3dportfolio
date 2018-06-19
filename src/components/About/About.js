@@ -10,10 +10,10 @@ class Home extends Component {
 		this.state = { xAbout: 0, yAbout: 0 };
 
 		// This binding is necessary to make `this` work in the callback
-		this.handleClick = this.handleClick.bind(this);
+		this.handleMouseEnter = this.handleMouseEnter.bind(this);
 		this.handleMouseLeave = this.handleMouseLeave.bind(this);
 	}
-	handleClick(e) {
+	handleMouseEnter(e) {
 		e.persist();
 		console.log("X " + e.pageX);
 		console.log("Y " + e.pageY);
@@ -33,10 +33,10 @@ class Home extends Component {
 	}
 	render() {
 		return (
-			<section className="About section parallax" onMouseMove={this.handleClick} onMouseLeave={this.handleMouseLeave}>
+			<section className="About" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				<NavBar />
 				<header>
-					<h1>{myName}</h1>
+					<h1 className="myName">{myName}</h1>
 				</header>
 				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 			</section>

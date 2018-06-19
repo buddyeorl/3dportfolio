@@ -1,16 +1,21 @@
   .About {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
-  bottom: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  height: 80vh;
+  height: 75vh;
   width:100vw;
-  
-  background:rgba(4, 15, 17, 0.753);
+  background: linear-gradient(to bottom right, rgba(187, 74, 22, 0.856), rgba(111, 7, 230, 0.842));
+  /* background:rgba(4, 15, 17, 0.753); */
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.137), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 
   }
-
+.myName {
+  font-size: 3.5em;
+  color: aliceblue;
+}
   /* .About:before {
     background: inherit;
     bottom: 0;

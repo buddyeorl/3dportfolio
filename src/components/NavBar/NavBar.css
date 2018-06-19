@@ -1,6 +1,6 @@
 nav 
 {
-    background:rgb(228, 218, 215);
+    background:rgba(216, 50, 0, 0);
     margin-right: 0px;
 }
 
@@ -12,6 +12,6 @@ nav
 }
 
 .navbar-brand:hover {
-    color: #1D3461;
+    color: rgb(140, 168, 224);
     font-size: 2em;
 }

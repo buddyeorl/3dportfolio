@@ -5,7 +5,7 @@ class Item extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { isToggleOn: true, moveMeRight: 0, moveMeUp: 0, width: 0, height: 0, mouseX: 0, mouseY: 0 };
+		this.state = { isToggleOn: true, moveMeRight: 0, moveMeUp: 0, awwPerspectiveX: 0, awwPerspectiveY: 0, width: 0, height: 0, mouseX: 0, mouseY: 0 };
 
 		// This binding is necessary to make `this` work in the callback
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -21,12 +21,20 @@ class Item extends Component {
 		let eleWidth = this.instance.getBoundingClientRect().width;
 		let eleHeight = this.instance.getBoundingClientRect().height;
 		let halfElementWidth = eleWidth / 2;
+		let totalAngle = 15; //angle to use in perspective, from -totalAngle to totalAngle
+		//changing perspective degree between -totalAngle to totalAngle degrees
+		let screenPerspectiveX = ((this.state.width - this.props.x) / this.state.width) * totalAngle * 2; // totalAngle * 2  because im assuming the perspective will change between -totalAngle to totalAngle
+		let screenPerspectiveY = ((this.state.height - this.props.y) / this.state.height) * totalAngle * 2; // totalAngle * 2  because im assuming the perspective will change between -totalAngle to totalAngle
+		//let widthToDegree = screenWidth - 
+		// finish changing perspective
 		changeX = (changeX - halfElementWidth) / 4000;
 		let halfElementHeight = eleHeight / 2;
 		changeY = (changeY - halfElementHeight) / 4000;
 		this.setState(prevState => ({
 			moveMeRight: this.state.moveMeRight + changeX,
-			moveMeUp: this.state.moveMeUp + changeY
+			moveMeUp: this.state.moveMeUp + changeY,
+			awwPerspectiveX: -1 * (screenPerspectiveX - totalAngle), // Addded -1 to make animation touch ground following the position of the mouse (0 is top and total height is bottom)
+			awwPerspectiveY: screenPerspectiveY - totalAngle
 		}));
 		console.log("X " + this.props.x);
 		console.log("Y " + this.props.y);
@@ -66,13 +74,13 @@ class Item extends Component {
 	}
 	render(props) {
 		return (
-			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px) rotateX(" + this.state.moveMeRight + "deg);"} className="portfolioItem" onMouseMove={this.handleClick}>
+			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px) perspective(400px) rotateY(" + this.state.awwPerspectiveX + "deg) rotateX(" + this.state.awwPerspectiveY + "deg);"} className="portfolioItem" onMouseMove={this.handleClick}>
 				<p >{this.props.name} {this.props.x} {this.props.y}</p>
 				<p >{this.props.description}</p>
 				<button >
 					{/* {this.state.isToggleOn ? 'ON' : 'OFF'} */}
 				</button>
-				<img src="http://pngimg.com/uploads/face/face_PNG5668.png" />
+				{/* <img src="http://pngimg.com/uploads/face/face_PNG5668.png" /> */}
 			</div>
 		);
 	}
