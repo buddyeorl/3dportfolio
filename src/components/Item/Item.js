@@ -5,7 +5,7 @@ class Item extends Component {
 
 	constructor(props) {
 		super(props);
-		this.state = { isToggleOn: true, moveMeRight: 0, moveMeUp: 0, width: 0, height: 0, mouseX: 0, mouseY: 0 };
+		this.state = { isToggleOn: true, moveMeRight: 0, moveMeUp: 0, awwPerspectiveX: 0, awwPerspectiveY: 0, width: 0, height: 0, mouseX: 0, mouseY: 0 };
 
 		// This binding is necessary to make `this` work in the callback
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -21,12 +21,19 @@ class Item extends Component {
 		let eleWidth = this.instance.getBoundingClientRect().width;
 		let eleHeight = this.instance.getBoundingClientRect().height;
 		let halfElementWidth = eleWidth / 2;
+		//changing perspective degree between -45 and 45 degrees
+		let screenPerspectiveX = ((this.state.width - this.props.x) / this.state.width) * 90; // 90 because im assuming the perspective will change between -45 and 45 degrees
+		let screenPerspectiveY = ((this.state.height- this.props.y) / this.state.height) * 90; // 90 because im assuming the perspective will change between -45 and 45 degrees
+		//let widthToDegree = screenWidth - 
+		// finish changing perspective
 		changeX = (changeX - halfElementWidth) / 4000;
 		let halfElementHeight = eleHeight / 2;
 		changeY = (changeY - halfElementHeight) / 4000;
 		this.setState(prevState => ({
 			moveMeRight: this.state.moveMeRight + changeX,
-			moveMeUp: this.state.moveMeUp + changeY
+			moveMeUp: this.state.moveMeUp + changeY,
+			awwPerspectiveX:screenPerspectiveX - 45,
+			awwPerspectiveY:screenPerspectiveY - 45
 		}));
 		console.log("X " + this.props.x);
 		console.log("Y " + this.props.y);
@@ -66,7 +73,7 @@ class Item extends Component {
 	}
 	render(props) {
 		return (
-			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px);"} className="portfolioItem" onMouseMove={this.handleClick}>
+			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px) perspective(400px) rotateY("+ this.state.awwPerspectiveX+"deg) rotateX("+ this.state.awwPerspectiveY+"deg);"} className="portfolioItem" onMouseMove={this.handleClick}>
 				<p >{this.props.name} {this.props.x} {this.props.y}</p>
 				<p >{this.props.description}</p>
 				<button >
