@@ -1,0 +1,21 @@
+  .AppHome {
+  text-align: center;
+  bottom: 2.5%;
+  background:rgba(194, 166, 6, 0.877);
+  height: 105vh;
+  width:100vw;
+  }
+  /* .AppHome:after {
+    background:rgb(4, 116, 133);
+    bottom: -10%;
+    content: '';
+    display: block;
+    height: 105%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(3.5deg);
+    transform-origin: 100%;
+    z-index: -1;
+  } */
+  
