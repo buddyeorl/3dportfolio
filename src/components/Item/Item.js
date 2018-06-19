@@ -13,37 +13,37 @@ class Item extends Component {
 		this.handleMouseLeave = this.handleMouseLeave.bind(this);
 	}
 
-	handleClick(e) {
+	handleClick() {
 		let offsetTop = this.instance.getBoundingClientRect().top;
 		let offsetLeft = this.instance.getBoundingClientRect().left;
-		let changeX = (e.pageX - offsetLeft);
-		let changeY = (e.pageY - offsetTop);
+		let changeX = (this.props.x - offsetLeft);
+		let changeY = (this.props.y - offsetTop);
 		let eleWidth = this.instance.getBoundingClientRect().width;
 		let eleHeight = this.instance.getBoundingClientRect().height;
 		let halfElementWidth = eleWidth / 2;
-		changeX = (changeX - halfElementWidth) / 40;
+		changeX = (changeX - halfElementWidth) / 4000;
 		let halfElementHeight = eleHeight / 2;
-		changeY = (changeY - halfElementHeight) / 40;
+		changeY = (changeY - halfElementHeight) / 4000;
 		this.setState(prevState => ({
 			moveMeRight: this.state.moveMeRight + changeX,
 			moveMeUp: this.state.moveMeUp + changeY
 		}));
-		console.log("X " + e.pageX);
-		console.log("Y " + e.pageY);
+		console.log("X " + this.props.x);
+		console.log("Y " + this.props.y);
 		console.log("ClientX " + this.state.width);
 		console.log("ClientY " + this.state.height);
 		console.log("OffsetTop " + offsetTop);
 		console.log("OffsetLeft " + offsetLeft);
 		console.log("Width " + this.instance.getBoundingClientRect().width);
+		console.log(this.instance.offsetParent);
+		console.log(this);
 	}
 
-	handleMouseLeave(e) {
+	handleMouseLeave() {
 		this.setState(prevState => ({
 			moveMeRight: 0,
 			moveMeUp: 0
 		}));
-		console.log("X " + e.pageX);
-		console.log("Y " + e.pageY);
 	}
 	componentDidMount() {
 		this.updateWindowDimensions();
@@ -57,11 +57,18 @@ class Item extends Component {
 	updateWindowDimensions() {
 		this.setState({ width: window.innerWidth, height: window.innerHeight });
 	}
+	componentWillReceiveProps() {
+		this.handleClick();
+		//reset position in case of hoverOut
+		if (this.props.x === 0 && this.props.y === 0) {
+			this.handleMouseLeave();
+		}
+	}
 	render(props) {
 		return (
-			<div className="portfolioItem" onMouseMove={this.handleClick} onMouseLeave={this.handleMouseLeave}>
-				<p >{this.props.name} </p>
-				<p ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px);"}>{this.props.description}</p>
+			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px);"} className="portfolioItem" onMouseMove={this.handleClick}>
+				<p >{this.props.name} {this.props.x} {this.props.y}</p>
+				<p >{this.props.description}</p>
 				<button >
 					{/* {this.state.isToggleOn ? 'ON' : 'OFF'} */}
 				</button>
