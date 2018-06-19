@@ -66,12 +66,13 @@ class Item extends Component {
 	}
 	render(props) {
 		return (
-			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px);"} className="portfolioItem" onMouseMove={this.handleClick}>
+			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px) rotateX(" + this.state.moveMeRight + "deg);"} className="portfolioItem" onMouseMove={this.handleClick}>
 				<p >{this.props.name} {this.props.x} {this.props.y}</p>
 				<p >{this.props.description}</p>
 				<button >
 					{/* {this.state.isToggleOn ? 'ON' : 'OFF'} */}
 				</button>
+				<img src="http://pngimg.com/uploads/face/face_PNG5668.png" />
 			</div>
 		);
 	}
