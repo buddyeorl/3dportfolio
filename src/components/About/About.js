@@ -33,13 +33,11 @@ class Home extends Component {
 	}
 	render() {
 		return (
-			<section className="About section parallax" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+			<section className="About" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				<NavBar />
 				<header>
-					<h1>{myName}</h1>
+					<h1 className="myName">{myName}</h1>
 				</header>
-				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
-				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 			</section>
 		);

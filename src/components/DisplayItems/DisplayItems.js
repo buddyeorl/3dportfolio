@@ -7,7 +7,7 @@ const descriptions = "";
 class DisplayItems extends Component {
 	render() {
 		return (
-			< section className="section parallax bg3 displayHolder row justify-content-center p-5" >
+			<div className="displayHolder row justify-content-center p-2" >
 				{
 					titles.map((title, index) =>
 						<div className="col- m-1 p-3">
@@ -15,7 +15,7 @@ class DisplayItems extends Component {
 						</div>
 					)
 				}
-			</section >
+			</div>
 		);
 	}
 }

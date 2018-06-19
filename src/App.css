@@ -2,9 +2,10 @@
 body,html{
   margin:0;
   padding:0; 
-  background-color: rgb(255, 255, 255);
- /* background: url("https://hdbackgroundspot.com//storage/upload/3d-background/3d-background-92.jpg"); */ 
-background-size: cover;
+  background-size: cover;
+}
+body {
+
 }
 
 .App {
@@ -23,7 +24,7 @@ background-size: cover;
   /* Needed for children to be absolutely positioned relative to the parent. */
   position: relative;
   /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 80vh;
+  height: 100vh;
   /* For text formatting. */
   display: flex;
   align-items: center;

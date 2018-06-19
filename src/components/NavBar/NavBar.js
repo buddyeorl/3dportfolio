@@ -4,7 +4,7 @@ import "./NavBar.css";
 class NavBar extends Component {
 	render(props) {
 		return (
-			<nav className="navbar fixed-top justify-content-left">
+			<nav className="navbar fixed-top justify-content-right">
 				<ul>
 					<a className="navbar-brand" href="#">Home</a>
 					<a className="navbar-brand" href="#">About</a>

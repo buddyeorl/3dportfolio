@@ -6,10 +6,9 @@
 } */
 
 .displayHolder {
-  background: rgba(12, 65, 144, 0.185);
   border-radius:2px;
   width:100vw;
-  height: 50vh;
+  height: 100%;
 }
 
 .displayItems {

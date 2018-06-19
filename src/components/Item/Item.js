@@ -21,9 +21,10 @@ class Item extends Component {
 		let eleWidth = this.instance.getBoundingClientRect().width;
 		let eleHeight = this.instance.getBoundingClientRect().height;
 		let halfElementWidth = eleWidth / 2;
-		//changing perspective degree between -45 and 45 degrees
-		let screenPerspectiveX = ((this.state.width - this.props.x) / this.state.width) * 90; // 90 because im assuming the perspective will change between -45 and 45 degrees
-		let screenPerspectiveY = ((this.state.height- this.props.y) / this.state.height) * 90; // 90 because im assuming the perspective will change between -45 and 45 degrees
+		let totalAngle = 15; //angle to use in perspective, from -totalAngle to totalAngle
+		//changing perspective degree between -totalAngle to totalAngle degrees
+		let screenPerspectiveX = ((this.state.width - this.props.x) / this.state.width) *totalAngle*2; // totalAngle * 2  because im assuming the perspective will change between -totalAngle to totalAngle
+		let screenPerspectiveY = ((this.state.height- this.props.y) / this.state.height) * totalAngle*2; // totalAngle * 2  because im assuming the perspective will change between -totalAngle to totalAngle
 		//let widthToDegree = screenWidth - 
 		// finish changing perspective
 		changeX = (changeX - halfElementWidth) / 4000;
@@ -32,8 +33,8 @@ class Item extends Component {
 		this.setState(prevState => ({
 			moveMeRight: this.state.moveMeRight + changeX,
 			moveMeUp: this.state.moveMeUp + changeY,
-			awwPerspectiveX:screenPerspectiveX - 45,
-			awwPerspectiveY:screenPerspectiveY - 45
+			awwPerspectiveX:-1*(screenPerspectiveX - totalAngle), // Addded -1 to make animation touch ground following the position of the mouse (0 is top and total height is bottom)
+			awwPerspectiveY:screenPerspectiveY - totalAngle
 		}));
 		console.log("X " + this.props.x);
 		console.log("Y " + this.props.y);

@@ -7,12 +7,14 @@ import DisplayItems from '../DisplayItems';
 class Home extends Component {
 	render() {
 		return (
-			<section className="AppHome section parallax">
+			<div>
+			<section className="AppHome row">
 				<header>
 					<h1>My portfolio</h1>
 					<DisplayItems />
 				</header>
 			</section>
+			</div>
 		);
 	}
 }
