@@ -7,7 +7,7 @@ const descriptions = "";
 class DisplayItems extends Component {
 	render() {
 		return (
-			<div className="displayHolder row justify-content-center p-2" >
+			<div className="displayHolder row justify-content-center p-2 m-0" >
 				{
 					titles.map((title, index) =>
 						<div className="col- m-1 p-3">

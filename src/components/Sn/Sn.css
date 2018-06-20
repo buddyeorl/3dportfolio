@@ -1,0 +1,29 @@
+/* .displayContainer {
+  background: rgb(119, 148, 192);
+  justify-content: center;
+  border-radius:2px;
+  width:100vw;
+} */
+
+.snContainer {
+  height: 50vh;
+  width: 100vw;
+  background: linear-gradient(to top right, rgba(8, 1, 0, 0.911), rgba(0, 4, 15, 0.972));
+
+  justify-content: center middle;
+  text-align: center;
+  display: flex;
+
+}
+.snCard{
+max-height: 10vh;
+color: antiquewhite;
+}
+
+.imgClass{
+width: 5vw;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+  

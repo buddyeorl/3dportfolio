@@ -1,10 +1,15 @@
   .AppHome {
   text-align: center;
   padding: 0;
-  margin-top: 0px;
   min-height: 40vh;
   width:100vw;
   background: rgb(8, 2, 2);
+  }
+  .portfolioTitle{
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 2.5em;
+    color: rgba(0, 123, 231, 0.555);
   }
   /* .AppHome:after {
     background:rgb(4, 116, 133);
