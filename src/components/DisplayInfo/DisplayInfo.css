@@ -15,6 +15,8 @@
   border-width:5px;
   border-style:solid;
   border-color:rgb(255, 255, 255);
+  display: inline-block;
+  transition-duration: 1s;
 }
 
   

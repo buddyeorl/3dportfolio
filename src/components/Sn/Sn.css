@@ -8,7 +8,7 @@
 .snContainer {
   height: 50vh;
   width: 100vw;
-  background: linear-gradient(to top right, rgba(8, 1, 0, 0.911), rgba(0, 4, 15, 0.972));
+  background: linear-gradient(to top right, rgba(56, 10, 2, 0.911), rgba(3, 24, 83, 0.972));
 
   justify-content: center middle;
   text-align: center;
@@ -21,9 +21,13 @@ color: antiquewhite;
 }
 
 .imgClass{
-width: 5vw;
+width: 55px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+opacity: 0.5;
+filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 
-  
+.imgClass:hover{
+  opacity: 1;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
+  }  
