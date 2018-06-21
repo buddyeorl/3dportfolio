@@ -52,12 +52,13 @@ class DisplayInfo extends Component {
 	}
 	render(props) {
 		return (
-			<section className="displayInfoContainer b-5 p-5 w-75 align-items-center" >
+			<section className="displayInfoContainer b-0 p-0 w-75 align-items-center" >
 				{
 					titles.map((title, index) =>
 						<div key={index + "displayInfo"} id={index + "displayInfo"} className={"displayInfoCard w-" + this.state.displayInfoResize[index] + " p-3"} onMouseOver={this.handleClick.bind(this, index)} onMouseOut={this.handleMouseLeave.bind(this, index)} >
 							<p>{title}{index}</p>
 							<p>A small project using JS</p>
+							<iframe src="http://www.katenna.com" className="w-100 h-75"></iframe>
 						</div>
 					)
 				}
