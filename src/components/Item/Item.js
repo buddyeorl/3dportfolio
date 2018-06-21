@@ -27,9 +27,9 @@ class Item extends Component {
 		let screenPerspectiveY = ((this.state.height - this.props.y) / this.state.height) * totalAngle * 2; // totalAngle * 2  because im assuming the perspective will change between -totalAngle to totalAngle
 		//let widthToDegree = screenWidth - 
 		// finish changing perspective
-		changeX = (changeX - halfElementWidth) / 4000;
+		changeX = (changeX - halfElementWidth) / 1000;
 		let halfElementHeight = eleHeight / 2;
-		changeY = (changeY - halfElementHeight) / 4000;
+		changeY = (changeY - halfElementHeight) / 1000;
 		this.setState(prevState => ({
 			moveMeRight: this.state.moveMeRight + changeX,
 			moveMeUp: this.state.moveMeUp + changeY,
@@ -77,9 +77,6 @@ class Item extends Component {
 			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px) perspective(400px) rotateY(" + this.state.awwPerspectiveX + "deg) rotateX(" + this.state.awwPerspectiveY + "deg);"} className="portfolioItem" onMouseMove={this.handleClick}>
 				<p >{this.props.name} {this.props.x} {this.props.y}</p>
 				<p >{this.props.description}</p>
-				<button >
-					{/* {this.state.isToggleOn ? 'ON' : 'OFF'} */}
-				</button>
 				{/* <img src="http://pngimg.com/uploads/face/face_PNG5668.png" /> */}
 			</div>
 		);

@@ -52,7 +52,7 @@ class DisplayInfo extends Component {
 	}
 	render(props) {
 		return (
-			<section className="displayInfoContainer b-5 m-5 p-5" >
+			<section className="displayInfoContainer b-5 p-5 w-75 align-items-center" >
 				{
 					titles.map((title, index) =>
 						<div key={index + "displayInfo"} id={index + "displayInfo"} className={"displayInfoCard w-" + this.state.displayInfoResize[index] + " p-3"} onMouseOver={this.handleClick.bind(this, index)} onMouseOut={this.handleMouseLeave.bind(this, index)} >

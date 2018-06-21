@@ -39,6 +39,8 @@ class Home extends Component {
 					<h1 className="myName">{myName}</h1>
 				</header>
 				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
+				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
+				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 			</section>
 		);
 	}

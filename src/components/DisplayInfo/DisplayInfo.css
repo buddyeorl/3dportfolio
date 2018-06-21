@@ -7,6 +7,9 @@
 
 .displayInfoContainer {
   border-radius:2px;
+  margin: 0 auto;
+  text-align:center;
+  display: block;
 }
 .displayInfoCard{
   background-color: rgb(7, 35, 59);
