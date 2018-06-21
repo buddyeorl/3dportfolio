@@ -6,32 +6,53 @@ const descriptions = "";
 class DisplayInfo extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { displayInfoResize: 49.5 };
+		this.state = { displayInfoResize: [50, 50, 50, 50, 50, 50, 50, 50, 50] };
 
 		// This binding is necessary to make `this` work in the callback
 		this.handleClick = this.handleClick.bind(this);
 		this.handleMouseLeave = this.handleMouseLeave.bind(this);
 	}
 
-	handleClick(e) {
+	handleClick(index, e) {
 		// console.log(e.target.style.width); //check target width
-		console.log(this);
-		e.target.style.width = "90vw";
-		this._reactInternalFiber.child.child.stateNode.nextSibling.style.width = "8vw";
-		// this.setState({ displayInfoResize: 99 });
+		// console.log("element");
+		// console.log(e.target);
+		// console.log("element");
+		// console.log(index);
+		// using 75 / 25 resizing bootstrap utilities changing className of element to 75% of row size on hover
+		if (index % 2 === 0) {
+			const itemsToUpdate = this.state.displayInfoResize;
+			itemsToUpdate[index] = 75;
+			itemsToUpdate[index + 1] = 25;
+			this.setState({ itemsToUpdate });
+		} else {
+			const itemsToUpdate = this.state.displayInfoResize;
+			itemsToUpdate[index] = 75;
+			itemsToUpdate[index - 1] = 25;
+			this.setState({ itemsToUpdate });
+		}
 	}
-	handleMouseLeave(e) {
-		e.target.style.width = "49.5vw";
-		this._reactInternalFiber.child.child.stateNode.nextSibling.style.width = "49.5vw";
-		// this.setState({ displayInfoResize: 49.5 });
+	handleMouseLeave(index, e) {
+		// using 50 / 50 resizing bootstrap utilities changing className of element to 75% of row size on hover
+		if (index % 2 === 0) {
+			const itemsToUpdate = this.state.displayInfoResize;
+			itemsToUpdate[index] = 50;
+			itemsToUpdate[index + 1] = 50;
+			this.setState({ itemsToUpdate });
+		} else {
+			const itemsToUpdate = this.state.displayInfoResize;
+			itemsToUpdate[index] = 50;
+			itemsToUpdate[index - 1] = 50;
+			this.setState({ itemsToUpdate });
+		}
 	}
 	render(props) {
 		return (
-			<section className="displayInfoContainer b-0 m-0 p-2" >
+			<section className="displayInfoContainer b-0 m-0 p-0" >
 				{
 					titles.map((title, index) =>
-						<div className={"displayInfoCard mx-0 p-0"} Style={"width:" + this.state.displayInfoResize + "vw;"} onMouseOver={this.handleClick} onMouseOut={this.handleMouseLeave}>
-							<p>{title}</p>
+						<div key={index + "displayInfo"} id={index + "displayInfo"} className={"displayInfoCard w-" + this.state.displayInfoResize[index] + " p-3"} onMouseOver={this.handleClick.bind(this, index)} onMouseOut={this.handleMouseLeave.bind(this, index)} >
+							<p>{title}{index}</p>
 							<p>A small project using JS</p>
 						</div>
 					)

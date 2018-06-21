@@ -18,8 +18,8 @@ class App extends Component {
       <div>
         <About />
         <Home />
-        <DisplayItems />
         <DisplayInfo />
+        <DisplayItems />
         <Sn />
       </div>
       // Pages determines the total height of the inner content container
