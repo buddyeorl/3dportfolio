@@ -2,11 +2,15 @@ import React, { Component } from "react";
 import "./DisplayInfo.css";
 const titles = ["JS", "MongoDB", "Deep Learning", "React", "Full Stack", "Fun", "Full Stack App", "Blockchain", "Jupyter Books"];
 const descriptions = "";
-
+const initialSize = 50; //in percentage
+let displayInfoQty = []; // titles.length will set the size of this array to hold the displayInfo card initial size
+for (let i = 0; i < titles.length; i++) {
+	displayInfoQty.push(initialSize);
+}
 class DisplayInfo extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { displayInfoResize: [50, 50, 50, 50, 50, 50, 50, 50, 50] };
+		this.state = { displayInfoResize: displayInfoQty };
 
 		// This binding is necessary to make `this` work in the callback
 		this.handleClick = this.handleClick.bind(this);
@@ -48,7 +52,7 @@ class DisplayInfo extends Component {
 	}
 	render(props) {
 		return (
-			<section className="displayInfoContainer b-0 m-0 p-0" >
+			<section className="displayInfoContainer b-5 m-5 p-5" >
 				{
 					titles.map((title, index) =>
 						<div key={index + "displayInfo"} id={index + "displayInfo"} className={"displayInfoCard w-" + this.state.displayInfoResize[index] + " p-3"} onMouseOver={this.handleClick.bind(this, index)} onMouseOut={this.handleMouseLeave.bind(this, index)} >
