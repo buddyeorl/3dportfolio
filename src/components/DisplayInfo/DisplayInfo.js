@@ -58,7 +58,7 @@ class DisplayInfo extends Component {
 					titles.map((title, index) =>
 						<div key={index + "displayInfo"} id={index + "displayInfo"} className={"displayInfoCard w-" + this.state.displayInfoResize[index] + " p-0"} onMouseOver={this.handleClick.bind(this, index)} onMouseOut={this.handleMouseLeave.bind(this, index)} >
 							<div className="displayInfoDiv w-100 h-75">
-								<img src="desktop.png" alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
+								<img src="desktop.png" className="displayInfoDiv w-100 h-100" />
 							</div>
 							<div className="displayInfoDiv w-50 h-25"><p>A small project using JS</p></div>
 							<div className="displayInfoDiv w-50 h-25"><p>{title}{index}</p></div>

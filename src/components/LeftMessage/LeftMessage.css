@@ -31,3 +31,10 @@ transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
   transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
 }  
 
+.bigSideTextOnViewport:hover{
+  position: relative;
+  left:-20%;
+color: rgb(128, 32, 32); 
+text-decoration: underline;
+transition: width 1s, height 1s, background-color 1s, transform 1s;
+}
