@@ -6,6 +6,7 @@ import DisplayItems from './components/DisplayItems';
 import DisplayInfo from './components/DisplayInfo';
 import SnItem from './components/SnItem';
 import Sn from './components/Sn';
+import Portfolio from './components/Portfolio';
 import Parallax from 'react-springy-parallax'
 
 class App extends Component {
@@ -18,8 +19,8 @@ class App extends Component {
       <div>
         <About />
         <Home />
+        <Portfolio />
         <DisplayInfo />
-        <DisplayItems />
         <Sn />
       </div>
       // Pages determines the total height of the inner content container

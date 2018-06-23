@@ -1,0 +1,18 @@
+  .portfolio {
+    margin: 0 auto;
+  height: 150vh;
+  background: rgb(211, 211, 211);
+  background: linear-gradient(to bottom right, rgb(235, 238, 238), rgba(211, 215, 226, 0.972));
+  display: block;
+  }
+
+  .divPortfolio {
+  
+    display: inline-block;
+    float: left;
+  }
+
+  .insideDivPortfolio {
+    float: left;
+    background-color: red;
+  }

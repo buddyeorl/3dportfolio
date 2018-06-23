@@ -3,7 +3,7 @@ import "./About.css";
 import Item from '../Item';
 import NavBar from '../NavBar';
 const myBackground = 'Problem Solver at heart! Web development, Blockchain and Deep Learning enthusiast!';
-const myName = 'Alex Lizarraga'
+const myName = 'Alex  Lizarraga '
 class Home extends Component {
 	constructor(props) {
 		super(props);

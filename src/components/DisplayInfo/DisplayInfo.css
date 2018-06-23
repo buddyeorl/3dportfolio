@@ -12,6 +12,7 @@
   display: block;
 }
 .displayInfoCard{
+  opacity: 0.5;
   background-color: rgb(7, 35, 59);
   height: 75vh;
   color: antiquewhite;
@@ -21,5 +22,14 @@
   display: inline-block;
   transition-duration: 1s;
 }
+
+.displayInfoCard:hover{
+  opacity: 1;
+}
+
+.displayInfoDiv  {
+  float: left;
+}
+
 
   

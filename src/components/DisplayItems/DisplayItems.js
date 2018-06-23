@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./DisplayItems.css";
 import Item from '../Item';
+
 const titles = ["JS", "MongoDB", "Deep Learning", "React", "Full Stack", "Fun", "Full Stack App", "Blockchain", "Jupyter Books"];
 const descriptions = "";
 

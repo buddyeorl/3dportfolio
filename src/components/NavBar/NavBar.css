@@ -7,11 +7,11 @@ nav
 .navbar-brand{
     font-size: 1em;
     color: white;
-    -webkit-transition: 2s; /* For Safari 3.1 to 6.0 */
     transition-duration: 2s;
 }
 
 .navbar-brand:hover {
-    color: rgb(140, 168, 224);
+    color: rgb(8, 28, 68);
+    background-color: white;
     font-size: 2em;
 }
