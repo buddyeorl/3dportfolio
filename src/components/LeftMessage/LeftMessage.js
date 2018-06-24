@@ -16,14 +16,14 @@ class LeftMessage extends Component {
 		let offsetBottom = this.instance.getBoundingClientRect().bottom;
 		if (offsetTop < (this.state.height / 3) && offsetBottom > (this.state.height / 5)) {
 			if (this.state.textClass === "bigSideText") {
-				console.log("Blue in");
-				console.log(offsetBottom);
-				console.log(this.state.height);
+				// console.log("Blue in");
+				// console.log(offsetBottom);
+				// console.log(this.state.height);
 				this.setState({ textClass: "bigSideTextOnViewport" });
 			}
 		} else {
 			if (this.state.textClass === "bigSideTextOnViewport") {
-				console.log("gray in");
+				// console.log("gray in");
 				this.setState({ textClass: "bigSideText" });
 			}
 		}

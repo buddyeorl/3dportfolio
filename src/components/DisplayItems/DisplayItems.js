@@ -43,8 +43,8 @@ class DisplayItems extends Component {
 			<div className="displayHolder row justify-content-center p-2 m-0" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				{
 					titles.map((title, index) =>
-						<div className="col- m-1 p-3">
-							<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={false} rotateAngle={45} message={
+						<div key={index + "DivDisplay"} className="col- m-1 p-3">
+							<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={true} rotateAngle={15} delay={10000} message={
 								<Item name={title} description="A small project using JS" />
 							}
 							/>

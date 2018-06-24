@@ -49,7 +49,7 @@ class DisplayInfo extends Component {
 			itemsToUpdate[index - 1] = 50;
 			this.setState({ itemsToUpdate });
 		}
-		console.log(this);
+		// console.log(this);
 	}
 	render(props) {
 		return (

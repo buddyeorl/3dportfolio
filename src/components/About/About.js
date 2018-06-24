@@ -19,8 +19,8 @@ class Home extends Component {
 	}
 	handleMouseEnter(e) {
 		e.persist();
-		console.log("X " + e.clientX);
-		console.log("Y " + e.clientX);
+		// console.log("X " + e.clientX);
+		// console.log("Y " + e.clientX);
 		this.setState(prevState => ({
 			xAbout: e.clientX,
 			yAbout: e.clientY
@@ -32,8 +32,8 @@ class Home extends Component {
 			xAbout: 0,
 			yAbout: 0
 		}));
-		console.log("X " + e.pageX);
-		console.log("Y " + e.pageY);
+		// console.log("X " + e.pageX);
+		// console.log("Y " + e.pageY);
 	}
 	render() {
 		return (

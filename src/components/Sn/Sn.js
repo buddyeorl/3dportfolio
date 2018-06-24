@@ -9,10 +9,10 @@ class Sn extends Component {
 
 				{
 					socialAccs.map((social, index) =>
-						<div className="snCard col-2 mt-5">
+						<div key={index + "SnDiv"} className="snCard col-2 mt-5">
 							{social}
-							<div class="text-center">
-								<img src="twitter.png" class="imgClass rounded" alt="twitter.png" />
+							<div className="text-center">
+								<img src="twitter.png" className="imgClass rounded" alt="twitter.png" />
 							</div>
 						</div>
 					)

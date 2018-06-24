@@ -21,7 +21,7 @@ class App extends Component {
     this.communicationChild = this.communicationChild.bind(this);
   }
   communicationChild(indexReceived) {
-    console.log(indexReceived);
+    // console.log(indexReceived);
     this.setState(prevState => ({
       backgroundClass: "portfolioBackground" + indexReceived
     }));
@@ -33,7 +33,7 @@ class App extends Component {
         <Home />
         {
           projects.map((project, index) =>
-            <Portfolio receiveBackground={this.communicationChild} portfolioIndex={index} number={"0" + (index + 1)} projectName={project} demoUrl={demoProject[index]} imgProject={"0" + (index + 1) + ".png"} />
+            <Portfolio key={index + "Portfolio"} receiveBackground={this.communicationChild} portfolioIndex={index} number={"0" + (index + 1)} projectName={project} demoUrl={demoProject[index]} imgProject={"0" + (index + 1) + ".png"} />
           )
         }
         <DisplayInfo />

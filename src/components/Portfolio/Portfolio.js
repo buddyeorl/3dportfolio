@@ -46,8 +46,8 @@ class Portfolio extends Component {
 		let bottomPortfolio = this.instance.getBoundingClientRect().bottom;
 		let topClient = this.instance.getBoundingClientRect().y;
 		let difference = bottomPortfolio - topClient;
-		console.log(bottomPortfolio);
-		console.log(topClient)
+		// console.log(bottomPortfolio);
+		// console.log(topClient)
 		if (difference > 0 && bottomPortfolio < difference && bottomPortfolio > 0) {
 			this.props.receiveBackground(this.props.portfolioIndex);
 		}
