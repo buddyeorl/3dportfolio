@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import "./Portfolio.css";
 import LeftMessage from '../LeftMessage';
 import TransitionUp from '../TransitionUp';
+import TransitionRight from '../TransitionRight';
+import TransitionLeft from '../TransitionLeft';
+import FadeIn from '../TransitionLeft';
 
 class Portfolio extends Component {
 	render() {
@@ -17,10 +20,12 @@ class Portfolio extends Component {
 				</div>
 				<div className="divPortfolio w-50 h-100">
 					<div className="divPortfolio w-100 h-25 p-5">
-						<h1>
-							{/* This will hold the type of the project */}
-							Using Watson Deeplearning AI API
-						</h1>
+						<FadeIn message={
+							<h1>
+								{/* This will hold the type of the project */}
+								Using Watson Deeplearning AI API
+						</h1>} />
+
 					</div>
 					<div className="divPortfolio w-50 h-25 p-5">
 						<h5>
@@ -29,13 +34,14 @@ class Portfolio extends Component {
 					</div>
 					<div className="divPortfolio w-50 h-25">
 						{/* this will hold an image of the site. and link if clicked. */}
-						<TransitionUp message={<img src="desktop.png" alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
+						<TransitionRight message={<img src="desktop.png" alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
 						} />
 
 					</div>
 					<div className="divPortfolio w-50 h-25">
 						{/* this will hold another picture. and link. maybe. */}
-						<img src="desktop.png" alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
+						<TransitionLeft message={<img src="desktop.png" alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
+						} />
 					</div>
 					<div className="divPortfolio w-50 h-25 p-5">
 						<TransitionUp message={<ul>
@@ -43,7 +49,6 @@ class Portfolio extends Component {
 							<li>a list of</li>
 							<li>the technologies used</li>
 						</ul>} />
-
 					</div>
 					<div className="divPortfolio w-100 h-25 p-5">
 						<h2>this will hold quote describing the project</h2>

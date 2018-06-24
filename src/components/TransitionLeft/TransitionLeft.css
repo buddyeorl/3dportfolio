@@ -4,21 +4,21 @@ color: gray;
 font-size: 1em;
 }
 
-.transitionTextOnViewport{
+.transitionLeftTextOnViewport{
   position: relative;
   font-size: 1em;
-  animation-name: bounce; 
-  animation-duration: 0.4s; 
+  animation-name: bounceLeft; 
+  animation-duration: 0.8s; 
   transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
 }  
 
-@keyframes bounce {
-  0% {transform: translateY(15vh);} 
-  40% {transform: translateY(-2vh);} 
-  60% {transform: translateY(2vh);} 
-  80% {transform: translateY(-0.5vh);} 
-  90% {transform: translateY(0.5vh);} 
-  100% {transform: translateY(0vh);} 
+@keyframes bounceLeft {
+  0% {transform: translateX(-5vw);} 
+  40% {transform: translateX(2vw);} 
+  60% {transform: translateX(-2vw);} 
+  80% {transform: translateX(0.5vw);} 
+  90% {transform: translateX(-0.5vw);} 
+  100% {transform: translateX(0vw);} 
 } 
 
 /* .transitionTextOnViewport:hover{

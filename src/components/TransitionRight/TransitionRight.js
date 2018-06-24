@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import "./TransitionUp.css";
+import "./TransitionRight.css";
 
-class TransitionUp extends Component {
+class TransitionRight extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { width: 0, height: 0, transitionUpClass: "noTransitionText" };
+		this.state = { width: 0, height: 0, textClass: "noTransitionText" };
 
 		// This binding is necessary to make `this` work in the callback
 		this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
@@ -16,16 +16,16 @@ class TransitionUp extends Component {
 		let offsetBottom = this.instance.getBoundingClientRect().bottom;
 		// if (offsetTop < (this.state.height) && offsetBottom > (this.state.height / 20)) {
 		if (offsetTop < (this.state.height)) {
-			if (this.state.transitionUpClass === "noTransitionText") {
+			if (this.state.textClass === "noTransitionText") {
 				// console.log("transition in");
 				// console.log(offsetBottom);
 				// console.log(this.state.height);
-				this.setState({ transitionUpClass: "transitionTextOnViewport" });
+				this.setState({ textClass: "transitionRightTextOnViewport" });
 			}
 		} else {
-			if (this.state.transitionUpClass === "transitionTextOnViewport") {
+			if (this.state.textClass === "transitionRightTextOnViewport") {
 				//console.log("transition out");
-				this.setState({ transitionUpClass: "noTransitionText" });
+				this.setState({ textClass: "noTransitionText" });
 			}
 		}
 	}
@@ -46,11 +46,11 @@ class TransitionUp extends Component {
 
 	render(props) {
 		return (
-			<div ref={(el) => this.instance = el} className={"w-100 h-100 " + this.state.transitionUpClass}>
+			<div ref={(el) => this.instance = el} className={"w-100 h-100 " + this.state.textClass}>
 				{this.props.message}
 			</div>
 		);
 	}
 }
 
-export default TransitionUp;
+export default TransitionRight;

@@ -4,21 +4,17 @@ color: gray;
 font-size: 1em;
 }
 
-.transitionTextOnViewport{
+.fadeInTextOnViewport{
   position: relative;
   font-size: 1em;
-  animation-name: bounce; 
+  animation-name: fadeIn; 
   animation-duration: 0.4s; 
   transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
 }  
 
-@keyframes bounce {
-  0% {transform: translateY(15vh);} 
-  40% {transform: translateY(-2vh);} 
-  60% {transform: translateY(2vh);} 
-  80% {transform: translateY(-0.5vh);} 
-  90% {transform: translateY(0.5vh);} 
-  100% {transform: translateY(0vh);} 
+@keyframes fadeIn {
+  0% {opacity:0; font-size: 0em;} 
+  100% {opacity:1; font-size: 4em;}
 } 
 
 /* .transitionTextOnViewport:hover{
