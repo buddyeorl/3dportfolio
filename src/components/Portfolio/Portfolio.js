@@ -18,6 +18,7 @@ class Portfolio extends Component {
 		// This binding is necessary to make `this` work in the callback
 		this.handleMouseEnter = this.handleMouseEnter.bind(this);
 		this.handleMouseLeave = this.handleMouseLeave.bind(this);
+		this.changeTheParentBackground = this.changeTheParentBackground.bind(this);
 	}
 	handleMouseEnter(e) {
 		e.persist();
@@ -28,6 +29,7 @@ class Portfolio extends Component {
 			xAbout: e.clientX, // sending the client height
 			yAbout: e.clientY // sending the client width
 		}));
+
 	}
 	handleMouseLeave(e) {
 		e.persist();
@@ -40,15 +42,32 @@ class Portfolio extends Component {
 	}
 	// ======================================END============================================ //
 
-	render() {
+	changeTheParentBackground() {
+		let bottomPortfolio = this.instance.getBoundingClientRect().bottom;
+		let topClient = this.instance.getBoundingClientRect().y;
+		let difference = bottomPortfolio - topClient;
+		console.log(bottomPortfolio);
+		console.log(topClient)
+		if (difference > 0 && bottomPortfolio < difference && bottomPortfolio > 0) {
+			this.props.receiveBackground(this.props.portfolioIndex);
+		}
+	}
+	componentDidMount() {
+		window.addEventListener('scroll', this.changeTheParentBackground);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.changeTheParentBackground);
+	}
+	render(props) {
 		return (
 			// onMouseMove and onMouseLeave "listeners" added to the parent div, IMPORTANT: transition3d need the listeners to work.
 			// x={this.state.xAbout} y={this.state.yAbout}  need to be sent to the element transition3d to work
-			<div className="portfolio w-100 p-0 b-0" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+			<div ref={(el) => this.instance = el} className={"portfolio portfolioBackground" + this.props.backgroundColor + " w-100 p-0 b-0"} onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				<div className="divPortfolio w-25 h-100">
 					<div className="divPortfolio w-100 h-50">
 						<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={false} rotateAngle={7.5} message={
-							<LeftMessage number="01" />
+							<LeftMessage number={this.props.number} />
 						}
 						/>
 					</div>
@@ -68,7 +87,7 @@ class Portfolio extends Component {
 						<TransitionUp message={
 							<div>
 								<h2>
-									What The Fork!
+									{this.props.projectName}
 								</h2>
 								<p>
 									How many times have you wondered what could you cook with that ingredient
@@ -82,8 +101,8 @@ class Portfolio extends Component {
 					<div className="divPortfolio w-50 h-25">
 						{/* this will hold an image of the site. and link if clicked. */}
 						<Transition3d x={this.state.xAbout} y={this.state.yAbout} rotateAngle={7.5} message={
-							<a href="https://buddyeorl.github.io/WhatTheFork/" target="_blank">
-								<TransitionRight message={<img src="desktop.png" alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
+							<a href={this.props.demoUrl} target="_blank">
+								<TransitionRight message={<img src={this.props.imgProject} alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
 								} />
 							</a>
 						}
@@ -118,12 +137,12 @@ class Portfolio extends Component {
 					</div>
 					<div className="divPortfolio w-100 h-25 p-5 m-5 b-5">
 						{/* this will hold quote describing the project */}
-						<h2><a href="https://buddyeorl.github.io/WhatTheFork/" target="_blank">Status: In progress, Live Demo. Click Here</a></h2>
+						<h2><a href={this.props.demoUrl} target="_blank">Status: In progress, Live Demo. Click Here</a></h2>
 					</div>
 				</div>
 				<div className="divPortfolio w-25 h-100">
 					{/* big text in here or big picture or landing pages */}
-					<FollowingTag message={"What The fork!"} />
+					<FollowingTag message={this.props.projectName} />
 				</div>
 			</div >
 		);

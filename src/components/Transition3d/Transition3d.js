@@ -22,14 +22,15 @@ class Transition3d extends Component {
 		let eleHeight = this.instance.getBoundingClientRect().height;
 		let halfElementWidth = eleWidth / 2;
 		let totalAngle = this.props.rotateAngle; //angle to use in perspective, from -totalAngle to totalAngle
+		let delay = this.props.delay; // how quickly it moves to the mouse pointer in px transformation
 		//changing perspective degree between -totalAngle to totalAngle degrees
 		let screenPerspectiveX = ((this.state.width - this.props.x) / this.state.width) * totalAngle * 2; // totalAngle * 2  because im assuming the perspective will change between -totalAngle to totalAngle
 		let screenPerspectiveY = ((this.state.height - this.props.y) / this.state.height) * totalAngle * 2; // totalAngle * 2  because im assuming the perspective will change between -totalAngle to totalAngle
 		//let widthToDegree = screenWidth - 
 		// finish changing perspective
-		changeX = (changeX - halfElementWidth) / 1000;
+		changeX = (changeX - halfElementWidth) / delay;
 		let halfElementHeight = eleHeight / 2;
-		changeY = (changeY - halfElementHeight) / 1000;
+		changeY = (changeY - halfElementHeight) / delay;
 		// this.setState(prevState => ({
 		// 	moveMeRight: this.state.moveMeRight + changeX,
 		// 	moveMeUp: this.state.moveMeUp + changeY,

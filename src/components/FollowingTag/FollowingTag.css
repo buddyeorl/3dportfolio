@@ -8,7 +8,7 @@
 }
 
 .followingTagOnViewport{
-  background: linear-gradient(to right, rgba(211, 211, 211, 0.171), rgba(1, 9, 34, 0.972),rgba(246, 246, 246, 0));
+  background: linear-gradient(to right, rgba(211, 211, 211, 0.171), rgba(162, 171, 199, 0.972),rgba(246, 246, 246, 0));
   color: rgb(4, 93, 167);
   position: relative;
   font-size: 3em;

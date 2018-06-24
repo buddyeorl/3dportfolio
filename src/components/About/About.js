@@ -22,8 +22,8 @@ class Home extends Component {
 		console.log("X " + e.clientX);
 		console.log("Y " + e.clientX);
 		this.setState(prevState => ({
-			xAbout: e.pageX,
-			yAbout: e.pageY
+			xAbout: e.clientX,
+			yAbout: e.clientY
 		}));
 	}
 	handleMouseLeave(e) {
@@ -39,7 +39,7 @@ class Home extends Component {
 		return (
 			<section className="About" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				<NavBar />
-				<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={false} rotateAngle={15} message={
+				<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={true} rotateAngle={15} delay={10000} message={
 					<header>
 						<h1 className="myName">{myName}</h1>
 					</header>

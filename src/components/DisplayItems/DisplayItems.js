@@ -44,8 +44,7 @@ class DisplayItems extends Component {
 				{
 					titles.map((title, index) =>
 						<div className="col- m-1 p-3">
-							<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={false} rotateAngle={15} message={
-
+							<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={false} rotateAngle={45} message={
 								<Item name={title} description="A small project using JS" />
 							}
 							/>
