@@ -2,23 +2,25 @@
   position: relative;
 color: gray; 
 font-size: 1em;
+opacity:0;
 }
 
 .transitionTextOnViewport{
   position: relative;
   font-size: 1em;
   animation-name: bounce; 
-  animation-duration: 0.4s; 
-  transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
+  animation-duration: 2s; 
 }  
 
 @keyframes bounce {
   0% {transform: translateY(15vh);} 
-  40% {transform: translateY(-2vh);} 
-  60% {transform: translateY(2vh);} 
   80% {transform: translateY(-0.5vh);} 
-  90% {transform: translateY(0.5vh);} 
+  85% {transform: translateY(0.5vh);} 
+  90% {transform: translateY(-0.1vh);} 
+  95% {transform: translateY(0.1vh);} 
   100% {transform: translateY(0vh);} 
+  0% {opacity:0; } 
+  100% {opacity:1; }
 } 
 
 /* .transitionTextOnViewport:hover{

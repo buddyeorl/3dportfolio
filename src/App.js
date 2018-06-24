@@ -20,6 +20,18 @@ class App extends Component {
         <About />
         <Home />
         <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />        <Portfolio />
+        <Portfolio />
         <DisplayInfo />
         <Sn />
       </div>

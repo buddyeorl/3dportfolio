@@ -1,20 +1,22 @@
 .noTransitionText{
+  opacity:0;
   position: relative;
 color: gray; 
-font-size: 1em;
+font-size: 0em;
+justify-content: center;
 }
 
 .fadeInTextOnViewport{
   position: relative;
-  font-size: 1em;
   animation-name: fadeIn; 
-  animation-duration: 0.4s; 
-  transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
+  animation-duration: 2s; 
+  font-size: 2.5em;
+  justify-content: center;
 }  
 
 @keyframes fadeIn {
   0% {opacity:0; font-size: 0em;} 
-  100% {opacity:1; font-size: 4em;}
+  100% {opacity:1; font-size: 2.5em;}
 } 
 
 /* .transitionTextOnViewport:hover{
