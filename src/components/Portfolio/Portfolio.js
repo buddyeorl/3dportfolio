@@ -4,16 +4,53 @@ import LeftMessage from '../LeftMessage';
 import TransitionUp from '../TransitionUp';
 import TransitionRight from '../TransitionRight';
 import TransitionLeft from '../TransitionLeft';
+import Transition3d from '../Transition3d';
 import FadeIn from '../FadeIn';
 import FollowingTag from '../FollowingTag';
 
 class Portfolio extends Component {
+	// THESE LINES ARE NECESARY IF I NEED TO USE THE TRANSITION3D ELEMENT, THIS LINES WILL SEND THE RELATIVE MOUSE CORDINATES
+	// TO THE ELEMENT TRANSITION3D TO UPDATE CURRENT POSITION / ANIMATION
+	constructor(props) {
+		super(props);
+		this.state = { xAbout: 0, yAbout: 0 };
+
+		// This binding is necessary to make `this` work in the callback
+		this.handleMouseEnter = this.handleMouseEnter.bind(this);
+		this.handleMouseLeave = this.handleMouseLeave.bind(this);
+	}
+	handleMouseEnter(e) {
+		e.persist();
+		// console.log(e);
+		// console.log("X " + e.clientX); 
+		// console.log("Y " + e.clientY);
+		this.setState(prevState => ({
+			xAbout: e.clientX, // sending the client height
+			yAbout: e.clientY // sending the client width
+		}));
+	}
+	handleMouseLeave(e) {
+		e.persist();
+		this.setState(prevState => ({
+			xAbout: 0,
+			yAbout: 0
+		}));
+		// console.log("X " + e.pageX);
+		// console.log("Y " + e.pageY);
+	}
+	// ======================================END============================================ //
+
 	render() {
 		return (
-			<div className="portfolio w-100 p-0 b-0">
+			// onMouseMove and onMouseLeave "listeners" added to the parent div, IMPORTANT: transition3d need the listeners to work.
+			// x={this.state.xAbout} y={this.state.yAbout}  need to be sent to the element transition3d to work
+			<div className="portfolio w-100 p-0 b-0" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				<div className="divPortfolio w-25 h-100">
 					<div className="divPortfolio w-100 h-50">
-						<LeftMessage number="01" />
+						<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={false} rotateAngle={7.5} message={
+							<LeftMessage number="01" />
+						}
+						/>
 					</div>
 					<div className="divPortfolio w-100 h-50">
 						maybe a mouse follower anchor
@@ -44,8 +81,13 @@ class Portfolio extends Component {
 					</div>
 					<div className="divPortfolio w-50 h-25">
 						{/* this will hold an image of the site. and link if clicked. */}
-						<TransitionRight message={<img src="desktop.png" alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
-						} />
+						<Transition3d x={this.state.xAbout} y={this.state.yAbout} rotateAngle={7.5} message={
+							<a href="https://buddyeorl.github.io/WhatTheFork/" target="_blank">
+								<TransitionRight message={<img src="desktop.png" alt="Italian Trulli" className="displayInfoDiv w-100 h-100" />
+								} />
+							</a>
+						}
+						/>
 
 					</div>
 					<div className="divPortfolio w-50 h-25">
@@ -76,7 +118,7 @@ class Portfolio extends Component {
 					</div>
 					<div className="divPortfolio w-100 h-25 p-5 m-5 b-5">
 						{/* this will hold quote describing the project */}
-						<h2><a href="https://buddyeorl.github.io/WhatTheFork/">Status: In progress, Live Demo. Click Here</a></h2>
+						<h2><a href="https://buddyeorl.github.io/WhatTheFork/" target="_blank">Status: In progress, Live Demo. Click Here</a></h2>
 					</div>
 				</div>
 				<div className="divPortfolio w-25 h-100">

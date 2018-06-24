@@ -2,8 +2,12 @@ import React, { Component } from "react";
 import "./About.css";
 import Item from '../Item';
 import NavBar from '../NavBar';
+import Transition3d from '../Transition3d';
+
 const myBackground = 'Problem Solver at heart! Web development, Blockchain and Deep Learning enthusiast!';
 const myName = 'Alex  Lizarraga '
+
+
 class Home extends Component {
 	constructor(props) {
 		super(props);
@@ -15,8 +19,8 @@ class Home extends Component {
 	}
 	handleMouseEnter(e) {
 		e.persist();
-		console.log("X " + e.pageX);
-		console.log("Y " + e.pageY);
+		console.log("X " + e.clientX);
+		console.log("Y " + e.clientX);
 		this.setState(prevState => ({
 			xAbout: e.pageX,
 			yAbout: e.pageY
@@ -35,9 +39,12 @@ class Home extends Component {
 		return (
 			<section className="About" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				<NavBar />
-				<header>
-					<h1 className="myName">{myName}</h1>
-				</header>
+				<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={false} rotateAngle={15} message={
+					<header>
+						<h1 className="myName">{myName}</h1>
+					</header>
+				}
+				/>
 				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />

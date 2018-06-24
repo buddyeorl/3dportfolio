@@ -1,0 +1,5 @@
+
+  .transition3d {    
+    -webkit-transition: 0s; /* For Safari 3.1 to 6.0 */
+    transition: 0s;
+  }
