@@ -30,7 +30,7 @@ body,html{
   justify-content: center;
 }
 
-  .portfolioBackground{
+  .portfolioBackground0{
     background: linear-gradient(to bottom right, rgb(235, 238, 238), rgba(211, 215, 226, 0.972));
     transition: 2s;
   }

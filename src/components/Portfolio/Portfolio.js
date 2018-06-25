@@ -53,6 +53,7 @@ class Portfolio extends Component {
 		}
 	}
 	componentDidMount() {
+		console.log(this.props.mySkills);
 		window.addEventListener('scroll', this.changeTheParentBackground);
 	}
 
@@ -90,10 +91,7 @@ class Portfolio extends Component {
 									{this.props.projectName}
 								</h2>
 								<p>
-									How many times have you wondered what could you cook with that ingredient
-									you saw at the super market? or what is the name of that fruit or food you saw? well
-									don't worry, we have created "What the fork", just open the camera, take the picture of all
-									the ingredients you have, and in matter of seconds the app will tell you all the meals you can cook. Easy!
+									{this.props.projectDesc}
 								</p>
 							</div>
 						} />
@@ -121,15 +119,10 @@ class Portfolio extends Component {
 										Technologies Used in this project:
 									</h2>
 									<ul>
-										<li>IBM Watson API: Visual Recognition</li>
-										<li>Imgur API: Image Upload Service</li>
-										<li>Yummly API: Recipe Finder Service</li>
-										<li>Wikipedia API: Food Information</li>
-										<li>JavaScript</li>
-										<li>Firebase</li>
-										<li>NodeJS</li>
-										<li>HTML</li>
-										<li>CSS</li>
+										{this.props.mySkills.map((mySkill, index) =>
+											<li key={index + "mySkill"}>{mySkill}</li>
+										)
+										}
 									</ul>
 								</div>
 							}

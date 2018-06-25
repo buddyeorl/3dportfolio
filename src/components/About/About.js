@@ -4,9 +4,6 @@ import Item from '../Item';
 import NavBar from '../NavBar';
 import Transition3d from '../Transition3d';
 
-const myBackground = 'Problem Solver at heart! Web development, Blockchain and Deep Learning enthusiast!';
-const myName = 'Alex  Lizarraga '
-
 
 class Home extends Component {
 	constructor(props) {
@@ -35,19 +32,19 @@ class Home extends Component {
 		// console.log("X " + e.pageX);
 		// console.log("Y " + e.pageY);
 	}
-	render() {
+	render(props) {
 		return (
 			<section className="About" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				<NavBar />
 				<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={true} rotateAngle={15} delay={10000} message={
 					<header>
-						<h1 className="myName">{myName}</h1>
+						<h1 className="myName">{this.props.myName}</h1>
 					</header>
 				}
 				/>
-				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
-				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
-				< Item description={myBackground} x={this.state.xAbout} y={this.state.yAbout} />
+				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
+				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
+				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 			</section>
 		);
 	}
