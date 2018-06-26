@@ -19,7 +19,7 @@ the ingredients you have, and in matter of seconds the app will tell you all the
   "A project in progress that uses voice and language recognition to create and interact with website elements and display the code html code of such elements, all these without typing a word. The code listener will be the tool to create full websites with one voice command,  will help people with mobility impairement to code html, will help instructors to teach and see code changes in real time, children and adults will be able to code as long as there is a voice to do it.",
   "The war of the universes, a multiplayer online game (currently supports only two players) where you have to bomb your multiverse enemy planet, taking advantage of that moment where all the multiverse planets phase in.",
   "Search a set of gifs and click to play or click again to stop playing, who doesn't love gifs anyways?"]
-const demoProject = ["https://buddyeorl.github.io/WhatTheFork/", "http://www.katenna.com", "https://thecodelistener.herokuapp.com/", "https://buddyeorl.github.io/ggj2018/", "https://buddyeorl.github.io/GifTastic/"];
+const demoProject = ["https://whatthefork.herokuapp.com/", "http://www.katenna.com", "https://thecodelistener.herokuapp.com/", "https://buddyeorl.github.io/ggj2018/", "https://buddyeorl.github.io/GifTastic/"];
 const listOfSkills =
   [
     "JavaScript",
