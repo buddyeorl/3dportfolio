@@ -3,6 +3,7 @@ import "./About.css";
 import Item from '../Item';
 import NavBar from '../NavBar';
 import Transition3d from '../Transition3d';
+import Cube3d from '../Cube3d';
 
 
 class Home extends Component {
@@ -41,6 +42,7 @@ class Home extends Component {
 						<h1 className="myName">{this.props.myName}</h1>
 					</header>
 				}
+				/>
 				/>
 				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />

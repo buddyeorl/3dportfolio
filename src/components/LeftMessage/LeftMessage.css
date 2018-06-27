@@ -6,7 +6,7 @@
   position: relative;
   left:-20%;
   color: gray; 
-  font-size: 20em;
+  font-size: 20vw;
   transform: rotate(30deg);
   transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
 }
@@ -14,7 +14,7 @@
 .bigSideTextOnViewport{
   position: relative;
   left:-20%;
-  font-size: 20em;
+  font-size: 20vw;
   font-weight: bolder;
   color: rgb(128, 32, 32); 
   text-decoration: underline;

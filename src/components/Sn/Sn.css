@@ -6,28 +6,32 @@
 } */
 
 .snContainer {
-  height: 50vh;
+  height: 100vh;
   width: 100vw;
-  background: linear-gradient(to top right, rgba(56, 10, 2, 0.911), rgba(3, 24, 83, 0.972));
-
-  justify-content: center middle;
   text-align: center;
-  display: flex;
-
-}
-.snCard{
-max-height: 10vh;
-color: antiquewhite;
+display: block;
+background-color: gray;
 }
 
-.imgClass{
-width: 55px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-opacity: 0.5;
-filter: alpha(opacity=50); /* For IE8 and earlier */
+.snHolder{
+  vertical-align: middle;
+  float: left;
+  color: white;
 }
 
-.imgClass:hover{
-  opacity: 1;
-  filter: alpha(opacity=100); /* For IE8 and earlier */
-  }  
+.bigContact{
+  position: relative;
+  top:20%;
+  left:20%;
+  font-size: 10vw;
+  font-weight: bolder;
+  color: rgb(255, 255, 255); 
+  text-decoration: underline;
+  transform: rotate(90deg);
+  transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
+}  
+
+.bigContact:hover{
+  color: rgb(146, 31, 31); 
+  transition: width 1s, height 1s, background-color 1s, transform 1s;
+}

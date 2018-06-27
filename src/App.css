@@ -61,5 +61,25 @@ body,html{
   .portfolioBackground8{
     background: linear-gradient(to bottom right, rgb(65, 84, 168), rgba(211, 215, 226, 0.972));  
   }
+  .parallax {
+    background-color: white;
+    perspective: 100px;
+    height: 140vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px);
+  }
 
 

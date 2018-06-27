@@ -83,8 +83,12 @@ class App extends Component {
             <Portfolio key={index + "Portfolio"} receiveBackground={this.communicationChild} portfolioIndex={index} number={"0" + (index + 1)} projectName={project} demoUrl={demoProject[index]} imgProject={"0" + (index + 1) + ".png"} projectDesc={projectDescriptions[index]} mySkills={projectSkills[index]} />
           )
         }
-        <DisplayInfo />
-        <Sn />
+        <div className="parallax">
+
+          <DisplayInfo className="parallax__layer parallax__layer--back" />
+
+        </div>
+        <Sn className="parallax__layer parallax__layer--base" />
       </div>
     );
   }

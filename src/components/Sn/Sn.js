@@ -1,24 +1,55 @@
 import React, { Component } from "react";
 import "./Sn.css";
-const socialAccs = ["twitter", "linkedin", "facebook", "github", "linkedin", "facebook", "github"];
+import DockBottom from '../DockBottom';
+import LeftMessage from '../LeftMessage';
+import TransitionLeft from '../TransitionLeft';
+import TransitionRight from '../TransitionRight';
+import TransitionUp from '../TransitionUp';
 
 class Sn extends Component {
 	render() {
 		return (
-			<section className="snContainer row b-5 m-0 p-5">
+			<section className="snContainer w-100 m-0 p-0 b-0">
+				<div className="snHolder w-75 h-100">
+					<div className="snHolder w-100 h-25">
 
-				{
-					socialAccs.map((social, index) =>
-						<div key={index + "SnDiv"} className="snCard col-2 mt-5">
-							{social}
-							<div className="text-center">
-								<img src="twitter.png" className="imgClass rounded" alt="twitter.png" />
-							</div>
+					</div>
+					<div className="snHolder w-50 h-50 p-5">
+						<TransitionLeft message=
+							{<h1>Ok so now it's time to contact me!!</h1>}
+						/>
+					</div>
+					<div className="snHolder w-50 h-50 p-5">
+						<TransitionRight message=
+							{<DockBottom />}
+						/>
+					</div>
+					<div className="snHolder w-75 h-25">
+						<div className="sw-100 h-25">
+
 						</div>
-					)
-				}
+						<div className="sw-100 h-25">
 
-			</section>
+						</div>
+					</div>
+				</div>
+
+				<div className="snHolder w-25 h-100"  >
+					<TransitionUp message=
+						{
+							<div className="bigContact">
+								Contact
+							</div>
+						}
+					/>
+
+				</div>
+
+
+
+
+
+			</section >
 		);
 	}
 }
