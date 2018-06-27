@@ -85,10 +85,11 @@ class App extends Component {
         }
         <div className="parallax">
 
-          <DisplayInfo className="parallax__layer parallax__layer--back" />
+          <DisplayInfo className="parallax__layer parallax__layer--base" />
+          <Sn className="parallax__layer parallax__layer--back" />
 
         </div>
-        <Sn className="parallax__layer parallax__layer--base" />
+
       </div>
     );
   }
