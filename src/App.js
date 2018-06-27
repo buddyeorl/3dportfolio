@@ -8,6 +8,7 @@ import SnItem from './components/SnItem';
 import Sn from './components/Sn';
 import Portfolio from './components/Portfolio';
 import Parallax from 'react-springy-parallax'
+import TransitionUp from './components/TransitionUp';
 
 const myBackgroundPortfolio = 'Problem Solver at heart! Web development, Blockchain and Deep Learning enthusiast!';
 const myNamePortfolio = 'Alex  Lizarraga '
@@ -76,20 +77,23 @@ class App extends Component {
 
     return (
       <div className={this.state.backgroundClass}>
+
         <About myBackground={myBackgroundPortfolio} myName={myNamePortfolio} />
-        <Home />
+        <TransitionUp message=
+          {
+            <Home />
+          }
+        />
         {
           projects.map((project, index) =>
             <Portfolio key={index + "Portfolio"} receiveBackground={this.communicationChild} portfolioIndex={index} number={"0" + (index + 1)} projectName={project} demoUrl={demoProject[index]} imgProject={"0" + (index + 1) + ".png"} projectDesc={projectDescriptions[index]} mySkills={projectSkills[index]} />
           )
         }
-        <div className="parallax">
-
-          <DisplayInfo className="parallax__layer parallax__layer--base" />
-          <Sn className="parallax__layer parallax__layer--back" />
-
-        </div>
-
+        <TransitionUp message=
+          {
+            <Sn />
+          }
+        />
       </div>
     );
   }
