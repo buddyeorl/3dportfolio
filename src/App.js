@@ -9,6 +9,7 @@ import Sn from './components/Sn';
 import Portfolio from './components/Portfolio';
 import Parallax from 'react-springy-parallax'
 import TransitionUp from './components/TransitionUp';
+import TransitionRight from './components/TransitionRight';
 
 const myBackgroundPortfolio = 'Problem Solver at heart! Web development, Blockchain and Deep Learning enthusiast!';
 const myNamePortfolio = 'Alex  Lizarraga '

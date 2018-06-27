@@ -13,7 +13,7 @@ opacity:0;
 }  
 
 @keyframes bounce {
-  0% {transform: translateY(15vh);} 
+  0% {transform: translateY(25vh);} 
   80% {transform: translateY(-0.5vh);} 
   85% {transform: translateY(0.5vh);} 
   90% {transform: translateY(-0.1vh);} 
