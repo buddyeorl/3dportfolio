@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./DisplayInfo.css";
+import { titles } from '../../variables/Variables.js';
 
 class DisplayInfo extends Component {
 	constructor(props) {

@@ -40,7 +40,7 @@ class DisplayItems extends Component {
 				{
 					titles.map((title, index) =>
 						<div key={index + "DivDisplay"} className="col- m-1 p-3">
-							<Item name={title} description="A small project using JS" />
+							<Item name={title} description={title} />
 						</div>
 					)
 				}

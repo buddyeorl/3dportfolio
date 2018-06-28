@@ -77,7 +77,7 @@ class Portfolio extends Component {
 					<div className="divPortfolio w-100 h-25 p-5">
 						<h1>
 							{/* This will hold the type of the project */}
-							Using Watson Deeplearning AI API
+							{this.props.projectType}
 						</h1>
 					</div>
 					<div className="divPortfolio w-50 h-25 p-5">

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { putSkillsInArray, myBackgroundPortfolio, myNamePortfolio, projects, demoProject, projectDescriptions, projectSkills } from './variables/Variables.js';
+import { putSkillsInArray, myBackgroundPortfolio, myNamePortfolio, projects, projectT, demoProject, projectDescriptions, projectSkills } from './variables/Variables.js';
 import Home from './components/Home';
 import About from './components/About';
 import Sn from './components/Sn';
@@ -39,7 +39,7 @@ class App extends Component {
         />
         {
           projects.map((project, index) =>
-            <Portfolio key={index + "Portfolio"} receiveBackground={this.communicationChild} portfolioIndex={index} number={"0" + (index + 1)} projectName={project} demoUrl={demoProject[index]} imgProject={"0" + (index + 1) + ".png"} projectDesc={projectDescriptions[index]} mySkills={projectSkills[index]} />
+            <Portfolio key={index + "Portfolio"} receiveBackground={this.communicationChild} portfolioIndex={index} number={"0" + (index + 1)} projectName={project} projectType={projectT[index]} demoUrl={demoProject[index]} imgProject={"0" + (index + 1) + ".png"} projectDesc={projectDescriptions[index]} mySkills={projectSkills[index]} />
           )
         }
         <a name="contactStart" />

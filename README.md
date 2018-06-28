@@ -12,6 +12,8 @@ export const myNamePortfolio = 'Alex  Lizarraga '
 export const myBackgroundPortfolio = 'Problem Solver at heart! Web development, Blockchain and Deep Learning enthusiast!';
 // add as many project names as you want. ignore the side comment, those are projects that i have pending to upload on my own portfolio :)
 export const projects = ["What The Fork!", "Katenna", "CodeListener", "Multiverse", "GifTastic"]; //, "Fun", "Full Stack App", "Blockchain", "Jupyter Books"
+// add the project type for the above projects
+export const projectT = ["IBM Watson Visual Recognition WebApp", "Full Stack App", "IBM Watson Natural Language Recognition WebApp", "FUN", "More FUN using APIs"]; //, "Fun", "Full Stack App", "Blockchain", "Jupyter Books"
 // add the matching project description to the above projects. remember it's an array!!
 export const projectDescriptions = ["How many times have you wondered what could you cook with that ingredient you saw at the super market? or what is the name of that fruit or food you saw? well don't worry, we have created 'What the fork', just open the camera, take the picture of all the ingredients you have, and in matter of seconds the app will tell you all the meals you can cook. Easy!", "Never again!!, yes, You don't need to train the new hire!, with Katenna the continuity manual and the training expenses are a thing of the past, this app is the tool the managers use to train their new employees. Katenna works by keeping all the knowledge the current employee has about its position, and when an employee quits, the new hire can take the new position right away with katenna as the inexpensive trainer",
     "A project in progress that uses voice and language recognition to create and interact with website elements and display the code html code of such elements, all these without typing a word. The code listener will be the tool to create full websites with one voice command,  will help people with mobility impairement to code html, will help instructors to teach and see code changes in real time, children and adults will be able to code as long as there is a voice to do it.",
@@ -64,7 +66,7 @@ export let putSkillsInArray = () => {
 // =============================================DisplayInfo.js Variables============================================================//
 // =================================================================================================================================//
 // project or skill names, I will change this in the future...
-export const titles = ["JS", "MongoDB", "Deep Learning", "React", "Full Stack", "Fun", "Full Stack App", "Blockchain", "Jupyter Books"];
+export const titles = ["JS", "MongoDB", "Deep Learning", "ReactJS", "Full Stack", "Blockchain", "Jupyter Books"];
 export const descriptions = "";
 export const initialSize = 50; //in percentage
 
@@ -81,6 +83,8 @@ for (let i = 0; i < titles.length; i++) {
 export const socialAccs = ["alizarraga", "buddyeorl", "@buddyeorl", "Alex", "alexander_lizarraga@ymail.com"];
 // add your accounts in this order: linkedin, github, twitter, facebook, and your email.
 export const socialUrls = ["https://www.linkedin.com/in/alizarraga/", "https://github.com/buddyeorl", "https://twitter.com/buddyeorl", "https://www.facebook.com/alexander.lizarraga.144", "mailto: alexander_lizarraga@ymail.com"];
+
+
 
 ```
 
