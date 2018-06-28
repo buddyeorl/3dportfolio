@@ -15,7 +15,7 @@ class DockBottom extends Component {
 									<em>
 										<span>{social}</span>
 									</em>
-									<img src={"./assets/img/sn/" + (index + 1) + ".png"} alt="none" />
+									<img src={"./assets/img/sn/" + (index + 1) + ".png"} alt="none" target="_blank" />
 								</a>
 							</li>
 						)
