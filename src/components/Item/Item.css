@@ -16,6 +16,16 @@
     transition: 0s;
   }
 
+  .itemImg {
+    width: 86px;
+    height: auto;
+    border: none;
+    transition: width .2s, height .2s;
+  }
+  
+  .itemImg:hover, itemImg:focus{
+    width: 96px;
+  }
 
   /* .portfolioItem:hover {
       width: 20vw;

@@ -40,7 +40,7 @@ class DisplayItems extends Component {
 				{
 					titles.map((title, index) =>
 						<div key={index + "DivDisplay"} className="col- m-1 p-3">
-							<Item name={title} description={title} />
+							<Item name={title} description={title} img={"./assets/img/logos/0" + (index + 1) + ".png"} />
 						</div>
 					)
 				}

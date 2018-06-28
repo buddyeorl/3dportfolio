@@ -65,8 +65,8 @@ export let putSkillsInArray = () => {
 
 // =============================================DisplayInfo.js Variables============================================================//
 // =================================================================================================================================//
-// project or skill names, I will change this in the future...
-export const titles = ["JS", "MongoDB", "Deep Learning", "ReactJS", "Full Stack", "Blockchain", "Jupyter Books"];
+// project or skill names, I will change this in the future... please note that the images related to the titles, are named as 01.png for node, 02.png for reactjs etc. all this in /src/img/logos
+export const titles = ["NodeJS", "ReactJS", "MongoDB", "JavaScript", "HTML5", "Heroku", "CSS3", "Firebase", "Jupyter Books"];
 export const descriptions = "";
 export const initialSize = 50; //in percentage
 
@@ -83,7 +83,6 @@ for (let i = 0; i < titles.length; i++) {
 export const socialAccs = ["alizarraga", "buddyeorl", "@buddyeorl", "Alex", "alexander_lizarraga@ymail.com"];
 // add your accounts in this order: linkedin, github, twitter, facebook, and your email.
 export const socialUrls = ["https://www.linkedin.com/in/alizarraga/", "https://github.com/buddyeorl", "https://twitter.com/buddyeorl", "https://www.facebook.com/alexander.lizarraga.144", "mailto: alexander_lizarraga@ymail.com"];
-
 
 
 ```
