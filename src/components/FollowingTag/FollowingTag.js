@@ -13,8 +13,6 @@ class FollowingTag extends Component {
 
 	messageAnimation() {
 		let offsetTop = this.instance.getBoundingClientRect().top;
-		let offsetBottom = this.instance.getBoundingClientRect().bottom;
-		let changeTop = this.state.height - offsetTop;
 		// if (offsetTop < (this.state.height) && offsetBottom > (this.state.height / 20)) {
 		// if (changeTop > 976) {
 		// 	this.setState({ topPosition: "position: sticky; top:0px", textClass: "followingTagOnViewport" });

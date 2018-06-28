@@ -6,10 +6,10 @@ class NavBar extends Component {
 		return (
 			<nav className="navbar fixed-top justify-content-right">
 				<ul>
-					<a className="navbar-brand" href="#">Home</a>
-					<a className="navbar-brand" href="#">About</a>
-					<a className="navbar-brand" href="#">Contact</a>
-					<a className="navbar-brand" href="#">Portfolio</a>
+					<a className="navbar-brand" href="#homeStart">Home</a>
+					<a className="navbar-brand" href="#homeStart">About</a>
+					<a className="navbar-brand" href="#contactStart">Contact</a>
+					<a className="navbar-brand" href="#portfolioStart">Portfolio</a>
 				</ul>
 			</nav >
 		);

@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./DisplayItems.css";
 import Item from '../Item';
-import Transition3d from '../Transition3d';
 
 const titles = ["JS", "MongoDB", "Deep Learning", "React", "Full Stack", "Fun", "Full Stack App", "Blockchain", "Jupyter Books"];
-const descriptions = "";
 
 class DisplayItems extends Component {
 	// THESE LINES ARE NECESARY IF I NEED TO USE THE TRANSITION3D ELEMENT, THIS LINES WILL SEND THE RELATIVE MOUSE CORDINATES
@@ -44,10 +42,7 @@ class DisplayItems extends Component {
 				{
 					titles.map((title, index) =>
 						<div key={index + "DivDisplay"} className="col- m-1 p-3">
-							<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={true} rotateAngle={15} delay={10000} message={
-								<Item name={title} description="A small project using JS" />
-							}
-							/>
+							<Item name={title} description="A small project using JS" />
 						</div>
 					)
 				}

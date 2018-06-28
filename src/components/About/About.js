@@ -3,7 +3,6 @@ import "./About.css";
 import Item from '../Item';
 import NavBar from '../NavBar';
 import Transition3d from '../Transition3d';
-import Cube3d from '../Cube3d';
 
 
 class Home extends Component {
@@ -37,7 +36,7 @@ class Home extends Component {
 		return (
 			<section className="About" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
 				<NavBar />
-				<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={true} rotateAngle={15} delay={10000} message={
+				<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={true} rotateAngle={5} delay={10000} message={
 					<header>
 						<h1 className="myName">{this.props.myName}</h1>
 					</header>

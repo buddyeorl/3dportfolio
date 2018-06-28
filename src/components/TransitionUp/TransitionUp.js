@@ -13,7 +13,6 @@ class TransitionUp extends Component {
 
 	messageAnimation() {
 		let offsetTop = this.instance.getBoundingClientRect().top;
-		let offsetBottom = this.instance.getBoundingClientRect().bottom;
 		// if (offsetTop < (this.state.height) && offsetBottom > (this.state.height / 20)) {
 		if (offsetTop < (this.state.height)) {
 			if (this.state.transitionUpClass === "noTransitionText") {

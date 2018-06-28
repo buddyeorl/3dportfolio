@@ -91,7 +91,6 @@ class Transition3d extends Component {
 		return (
 			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px) perspective(1000px) rotateY(" + this.state.awwPerspectiveX + "deg) rotateX(" + this.state.awwPerspectiveY + "deg);"} className={this.state.textClass} onMouseMove={this.handleClick}>
 				{this.props.message}
-
 			</div>
 		);
 	}

@@ -3,9 +3,7 @@ import "./Portfolio.css";
 import LeftMessage from '../LeftMessage';
 import TransitionUp from '../TransitionUp';
 import TransitionRight from '../TransitionRight';
-import TransitionLeft from '../TransitionLeft';
 import Transition3d from '../Transition3d';
-import FadeIn from '../FadeIn';
 import FollowingTag from '../FollowingTag';
 
 class Portfolio extends Component {
@@ -53,7 +51,7 @@ class Portfolio extends Component {
 		}
 	}
 	componentDidMount() {
-		console.log(this.props.mySkills);
+		// console.log(this.props.mySkills);
 		window.addEventListener('scroll', this.changeTheParentBackground);
 	}
 

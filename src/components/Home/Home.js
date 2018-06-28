@@ -8,7 +8,6 @@ class Home extends Component {
 			<div>
 				<section className="AppHome">
 					<header>
-						<h1 className="portfolioTitle"></h1>
 						<DisplayItems />
 					</header>
 				</section>

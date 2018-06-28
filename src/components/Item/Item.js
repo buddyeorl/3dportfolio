@@ -74,7 +74,7 @@ class Item extends Component {
 	}
 	render(props) {
 		return (
-			<div ref={(el) => this.instance = el} Style={"transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px) perspective(400px) rotateY(" + this.state.awwPerspectiveX + "deg) rotateX(" + this.state.awwPerspectiveY + "deg);"} className="portfolioItem" onMouseMove={this.handleClick}>
+			<div ref={(el) => this.instance = el} Style={"z-index:10; transform: translate(" + this.state.moveMeRight + "px," + this.state.moveMeUp + "px) perspective(400px) rotateY(" + this.state.awwPerspectiveX + "deg) rotateX(" + this.state.awwPerspectiveY + "deg);"} className="portfolioItem" onMouseMove={this.handleClick}>
 				<p >{this.props.name} {this.props.x} {this.props.y}</p>
 				<p >{this.props.description}</p>
 				{/* <img src="http://pngimg.com/uploads/face/face_PNG5668.png" /> */}

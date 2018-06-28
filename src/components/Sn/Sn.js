@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./Sn.css";
 import DockBottom from '../DockBottom';
-import LeftMessage from '../LeftMessage';
 import TransitionLeft from '../TransitionLeft';
 import TransitionRight from '../TransitionRight';
 import TransitionUp from '../TransitionUp';
@@ -12,7 +11,6 @@ class Sn extends Component {
 			<section className="snContainer w-100 m-0 p-0 b-0">
 				<div className="snHolder w-75 h-100">
 					<div className="snHolder w-100 h-25">
-
 					</div>
 					<div className="snHolder w-50 h-50 p-5">
 						<TransitionLeft message=
@@ -25,11 +23,14 @@ class Sn extends Component {
 						/>
 					</div>
 					<div className="snHolder w-75 h-25">
-						<div className="sw-100 h-25">
-
+						<div className="sw-100 h-25 p-5">
+							<TransitionRight message=
+								{<h6 className="p-5">Did you like this portfolio??, I've created this portfolio to share it, so please take a look at my
+									open source repo <a href="https://github.com/buddyeorl/3dportfolio" target="_blank">(Github Repo.
+									Click Here)</a>, if you like it, please star it, clone it, and share it.</h6>}
+							/>
 						</div>
 						<div className="sw-100 h-25">
-
 						</div>
 					</div>
 				</div>
