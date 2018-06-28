@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./DockBottom.css";
-const socialAccs = ["alizarraga", "buddyeorl", "@buddyeorl", "Alex", "alexander_lizarraga@ymail.com"];
-const socialUrls = ["https://www.linkedin.com/in/alizarraga/", "https://github.com/buddyeorl", "https://twitter.com/buddyeorl", "https://www.facebook.com/alexander.lizarraga.144", "mailto: alexander_lizarraga@ymail.com"];
+import { socialAccs, socialUrls } from '../../variables/Variables.js';
 
 class DockBottom extends Component {
 	render() {

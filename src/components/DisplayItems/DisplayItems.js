@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import "./DisplayItems.css";
 import Item from '../Item';
-
-const titles = ["JS", "MongoDB", "Deep Learning", "React", "Full Stack", "Fun", "Full Stack App", "Blockchain", "Jupyter Books"];
-
+import { titles } from '../../variables/Variables.js';
 class DisplayItems extends Component {
 	// THESE LINES ARE NECESARY IF I NEED TO USE THE TRANSITION3D ELEMENT, THIS LINES WILL SEND THE RELATIVE MOUSE CORDINATES
 	// TO THE ELEMENT TRANSITION3D TO UPDATE CURRENT POSITION / ANIMATION

@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import "./DisplayInfo.css";
-const titles = ["JS", "MongoDB", "Deep Learning", "React", "Full Stack", "Fun", "Full Stack App", "Blockchain", "Jupyter Books"];
-const descriptions = "";
-const initialSize = 50; //in percentage
-let displayInfoQty = []; // titles.length will set the size of this array to hold the displayInfo card initial size
-for (let i = 0; i < titles.length; i++) {
-	displayInfoQty.push(initialSize);
-}
+
 class DisplayInfo extends Component {
 	constructor(props) {
 		super(props);
