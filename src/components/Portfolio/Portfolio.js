@@ -12,7 +12,6 @@ class Portfolio extends Component {
 	constructor(props) {
 		super(props);
 		this.state = { xAbout: 0, yAbout: 0 };
-
 		// This binding is necessary to make `this` work in the callback
 		this.handleMouseEnter = this.handleMouseEnter.bind(this);
 		this.handleMouseLeave = this.handleMouseLeave.bind(this);
@@ -71,7 +70,7 @@ class Portfolio extends Component {
 						/>
 					</div>
 					<div className="divPortfolio w-100 h-50">
-						maybe a mouse follower anchor
+						I'm working on a website activity tracker, will leave this text as a reminder. if you think i should remove it, please send me an email or message and I'll reconsider it.
 					</div>
 				</div>
 				<div className="divPortfolio w-50 h-100">

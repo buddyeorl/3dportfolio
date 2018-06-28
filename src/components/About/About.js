@@ -43,8 +43,6 @@ class Home extends Component {
 				}
 				/>
 				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
-				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
-				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 			</section>
 		);
 	}
