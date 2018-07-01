@@ -45,7 +45,7 @@ class LeftMessage extends Component {
 
 	render(props) {
 		return (
-			<div ref={(el) => this.instance = el} className={this.state.textClass}>
+			<div className="leftMessageContainer" ref={(el) => this.instance = el} className={this.state.textClass}>
 				{this.props.number}
 			</div>
 		);

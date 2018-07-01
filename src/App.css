@@ -50,3 +50,14 @@ body,html{
 .portfolioBackground8{
   background: linear-gradient(to bottom right, rgb(65, 84, 168), rgba(211, 215, 226, 0.972));  
 }
+
+
+@media only screen and (max-width: 768px) {
+  html{
+    margin:0;
+    padding:0vw;   
+    display: block;   
+    min-width: 100vw;
+    overflow-x: hidden;
+  }
+}

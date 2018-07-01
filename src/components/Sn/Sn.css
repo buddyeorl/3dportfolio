@@ -36,3 +36,29 @@ background-color: rgb(54, 54, 54);
   color: rgb(146, 31, 31); 
   transition: width 1s, height 1s, background-color 1s, transform 1s;
 }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+
+  .snHolder{
+    vertical-align: middle;
+    float: left;
+    color: white;
+    background-color: rgb(54, 54, 54);
+  }
+  .bigContact{
+    position: relative;
+    top:90%;
+    left:0%;
+    font-size: 10vw;
+    font-weight: bolder;
+    color: rgb(255, 255, 255); 
+    text-decoration: underline;
+    transform: rotate(0deg);
+    transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
+  }  
+  .bigContact:hover{
+    color: rgb(146, 31, 31); 
+    transition: width 1s, height 1s, background-color 1s, transform 1s;
+  }
+}

@@ -15,18 +15,8 @@
     color: rgba(0, 123, 231, 0.555);
   }
 
-
-  /* .AppHome:after {
-    background:rgb(4, 116, 133);
-    bottom: -10%;
-    content: '';
-    display: block;
-    height: 105%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(3.5deg);
-    transform-origin: 100%;
-    z-index: -1;
-  } */
-  
+  @media only screen and (max-width: 768px) {
+    .AppHome {
+      display: none;
+    }
+  }
