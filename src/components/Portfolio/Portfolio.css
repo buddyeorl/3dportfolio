@@ -2,28 +2,7 @@
   margin: 0 auto;
   height: 140vh;
   display: block;
-  perspective: none;
-  /* background: linear-gradient(to bottom right, rgb(235, 238, 238), rgba(211, 215, 226, 0.972)); */
   }
-
-  /* .portfolioBackground1{
-    background: linear-gradient(to bottom right, rgb(235, 238, 238), rgba(211, 215, 226, 0.972));
-  }
-  .portfolioBackground2{
-    background: linear-gradient(to bottom right, rgb(65, 168, 168), rgba(211, 215, 226, 0.972));  
-  }
-  .portfolioBackground3{
-    background: linear-gradient(to bottom right, rgb(65, 168, 120), rgba(211, 215, 226, 0.972));  
-  }
-  .portfolioBackground4{
-    background: linear-gradient(to bottom right, rgb(65, 67, 168), rgba(211, 215, 226, 0.972));  
-  }
-  .portfolioBackground5{
-    background: linear-gradient(to bottom right, rgb(168, 94, 65), rgba(211, 215, 226, 0.972));  
-  }
-  .portfolioBackground6{
-    background: linear-gradient(to bottom right, rgb(94, 168, 65), rgba(211, 215, 226, 0.972));  
-  } */
   .divPortfolio {
     float: left;
   }

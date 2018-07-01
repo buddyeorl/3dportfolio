@@ -26,10 +26,11 @@ opacity:0;
   100% {opacity:1; }
 } 
 
-/* .transitionTextOnViewport:hover{
-  position: relative;
-  left:-20%;
-color: rgb(128, 32, 32); 
-text-decoration: underline;
-transition: width 1s, height 1s, background-color 1s, transform 1s;
-} */
+@media only screen and (max-width: 768px) {
+  .transitionRightTextOnViewport{
+    position: relative;
+    font-size: 1em;
+    animation-duration: 0s;
+    transition-duration: 0s; 
+  } 
+}
