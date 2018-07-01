@@ -36,6 +36,9 @@
 
   @media only screen and (max-width: 768px) {
     /* For mobile phones: */
+    .temporal{
+      color: white;
+    }
     .w-25{
       width:100vw !important;
       display: initial;
