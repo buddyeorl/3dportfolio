@@ -2,6 +2,7 @@
   margin: 0 auto;
   height: 140vh;
   display: block;
+  perspective: none;
   /* background: linear-gradient(to bottom right, rgb(235, 238, 238), rgba(211, 215, 226, 0.972)); */
   }
 
@@ -31,3 +32,34 @@
     float: left;
     background-color: red;
   }
+
+
+  @media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .w-25{
+      width:100vw !important;
+      display: initial;
+      padding: 1vw !important;
+    }
+    .w-50{
+      width:100vw !important;
+      display: initial;
+      padding: 1vw !important;
+    }
+    .w-75{
+      width:100vw !important;
+      display: initial;
+      padding: 1vw !important;
+    }
+    .w-100{
+      width:100vw !important;
+      display: initial;
+      padding: 1vw !important;
+    }
+    .section
+    {
+      width:100vw !important;
+      display: initial;
+      padding: 1vw !important;
+    }
+}

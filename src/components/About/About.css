@@ -7,34 +7,12 @@
   justify-content: center;
   padding: 0;
   height: 100vh;
+  width:100vw;
   background: linear-gradient(to bottom right, #45C8C9, rgba(2, 19, 75, 0.972));
-  overflow-x: hidden;
+  display: inline-block;
   }
-  /* .About::before {
-    position:absolute;
-    content: " ";
-    left:-100%;
-    bottom:0;
-    width:150vw;
-    height:100vh;
-    box-shadow: 0px -10px 500px #221b1b;
-    background-color: rgb(17, 30, 44);
-    transform: skew(-45deg);
+  
 
-    }
-    .About::after {
-      position:absolute;
-      content: " ";
-      left:-50%;
-      bottom:50%;
-      width:70vw;
-      height:50vh;
-      box-shadow: 20px 10px 500px 50px #221b1b;
-      background: linear-gradient(to bottom right, rgb(36, 71, 71), rgba(2, 19, 75, 0.972));
-      transform: translateX(100vw);
-      z-index: ;
-      } 
-  */
 
 
 .myName {
@@ -42,35 +20,19 @@
   color: aliceblue;
   transform: rotate(-40deg);
   display: block;
-  
+  top: 50vw;
 }
-  /* .About:before {
-    background: inherit;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(-0.5deg);
-    transform-origin: 100%;
-    z-index: -1;
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.096), 0 6px 10px 0 rgba(0, 0, 0, 0.082), 0 6px 10px 0 rgba(0, 0, 0, 0.082);
-  } */
-  /* .About:after {
-    background: inherit;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(-3.5deg);
-    transform-origin: 100%;
-    z-index: -1;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.137), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  } */
 
-  
+.pulse {
+  color: white;
+  animation-name: pulse;
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}

@@ -8,9 +8,6 @@
     border-radius: 3px;
     padding: 0px;
     margin-right: 0px;
-    /* border-width:2px;
-    border-style:solid;
-    border-color:rgb(255, 255, 255); */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-transition: 0s; /* For Safari 3.1 to 6.0 */
     transition: 0s;
@@ -24,10 +21,5 @@
   }
   
   .itemImg:hover, itemImg:focus{
-    width: 96px;
+    width: 106px;
   }
-
-  /* .portfolioItem:hover {
-      width: 20vw;
-      height: 20vw;
-  } */

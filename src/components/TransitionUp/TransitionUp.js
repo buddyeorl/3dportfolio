@@ -17,7 +17,6 @@ class TransitionUp extends Component {
 		if (offsetTop < (this.state.height)) {
 			if (this.state.transitionUpClass === "noTransitionText") {
 				// console.log("transition in");
-				// console.log(offsetBottom);
 				// console.log(this.state.height);
 				this.setState({ transitionUpClass: "transitionTextOnViewport" });
 			}

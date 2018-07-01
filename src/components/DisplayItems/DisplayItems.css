@@ -22,4 +22,11 @@
   display: auto;
 }
 
-  
+
+@media only screen and (max-width: 768px) {
+  .displayHolder {
+    height: 100vh !important;
+    width:100vw !important;
+    display: inline-table;
+  }
+}

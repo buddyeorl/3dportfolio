@@ -34,15 +34,33 @@ class Home extends Component {
 	}
 	render(props) {
 		return (
-			<section className="About" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
-				<NavBar />
-				<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={true} rotateAngle={5} delay={5000} message={
-					<header>
-						<h1 className="myName">{this.props.myName}</h1>
-					</header>
-				}
-				/>
-				< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
+			<section className="About w-100" onMouseMove={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
+				<div className="w-100 h-25">
+					<NavBar />
+				</div>
+				<div className="w-100 h-50">
+					<div className="w-25 h-100 m-0 p-0" Style={"float:left;"} >
+					</div>
+					<div className="w-50 h-100 m-0 p-0" Style={"float:left;"}>
+						<Transition3d x={this.state.xAbout} y={this.state.yAbout} follow={true} rotateAngle={5} delay={5000} message={
+							<header>
+								<h1 className="myName">{this.props.myName}</h1>
+							</header>
+						}
+						/>
+					</div>
+					<div className="w-25 h-100 m-0 p-0" Style={"float:left;"}>
+					</div>
+				</div>
+				<div className="w-25 h-100" Style={"float:left;"}>
+					< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
+				</div>
+				<div className="w-50 h-100" Style={"float:left;"}>
+					<div class="pulse"><h1>&darr;&darr;&darr;Scroll Down!!&darr;&darr;&darr;</h1></div>
+
+				</div>
+				<div className="w-25 h-100" Style={"float:left;"}>
+				</div>
 			</section>
 		);
 	}
