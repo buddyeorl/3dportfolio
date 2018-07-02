@@ -6,7 +6,6 @@ import About from './components/About';
 import Sn from './components/Sn';
 import Portfolio from './components/Portfolio';
 import TransitionUp from './components/TransitionUp';
-console.log(putSkillsInArray);
 
 class App extends Component {
   constructor(props) {

@@ -25,11 +25,8 @@
 } 
 
 @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
   .followingTagOnViewport{
-    background: white;
-    color: white;
-    position: relative;
-    font-size: 3em;
-    text-align: center;
+    display:none !important;
   }
 }

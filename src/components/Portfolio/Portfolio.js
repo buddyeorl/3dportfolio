@@ -84,7 +84,7 @@ class Portfolio extends Component {
 						{/* "this will hold a brief description of the website." */}
 						<TransitionUp message={
 							<div>
-								<h2>
+								<h2 className="mobileColorTitle">
 									{this.props.projectName}
 								</h2>
 								<p>
@@ -112,7 +112,7 @@ class Portfolio extends Component {
 						<TransitionUp message=
 							{
 								<div>
-									<h2>
+									<h2 className="mobileColorTech">
 										Technologies Used in this project:
 									</h2>
 									<ul>
@@ -127,7 +127,7 @@ class Portfolio extends Component {
 					</div>
 					<div className="divPortfolio w-100 h-25 p-5 m-5 b-5">
 						{/* this will hold quote describing the project */}
-						<h2><a href={this.props.demoUrl} target="_blank">Status: In progress, Live Demo. Click Here</a></h2>
+						<h2 className="mobileColorLink"><a href={this.props.demoUrl} target="_blank">Status: In progress, Live Demo. Click Here</a></h2>
 					</div>
 				</div>
 				<div className="divPortfolio w-25 h-100">

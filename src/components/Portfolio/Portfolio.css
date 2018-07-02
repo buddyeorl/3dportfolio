@@ -17,6 +17,7 @@
     /* For mobile phones: */
     .temporal{
       color: white;
+      display: none !important;
     }
     .w-25{
       width:100vw !important;
@@ -46,5 +47,25 @@
     }
     .b-5.b-4.b-3.b-2.b-1{
       border: 0rem!important;
+    }
+    p {
+      text-align:justify;
+    }
+    .mobileColorTitle {
+      background-color: rgb(29, 107, 196);
+      color: white;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+    }
+    .mobileColorTech {
+      background-color: rgb(196, 124, 29);
+      color: white;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+    }
+    .mobileColorLink {
+     text-decoration-line: underline;
     }
 }

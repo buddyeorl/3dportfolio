@@ -28,28 +28,32 @@
 }
 
 @media only screen and (max-width: 768px) {
+  /* For mobile phones: */
   .bigSideText{
+    text-align: center;
     position: relative;
-    left:0%;
+    left:0vw;
     color: gray; 
     font-size: 50vw;
     transform: rotate(0deg);
     transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
   }
   .bigSideTextOnViewport{
+    background: grey;
+    text-align: center;
     position: relative;
-    left:15vw;
+    left:0vw;
     font-size: 50vw;
     font-weight: bolder;
     color: rgb(128, 32, 32); 
     text-decoration: underline;
-    -webkit-transform: rotate(0deg);
     transform: rotate(0deg);
     transition: width 0.5s, height 0.5s, background-color 0.5s, transform 0.5s;
   } 
   .bigSideTextOnViewport:hover{
+    text-align: center;
     position: relative;
-    left:15vw;
+    left:0vw;
     color: rgb(31, 123, 146); 
     text-decoration: underline;
     transition: width 1s, height 1s, background-color 1s, transform 1s;
