@@ -29,4 +29,7 @@
   .followingTagOnViewport{
     display:none !important;
   }
+  .noFollowingTag{
+    display:none !important;
+  }
 }
