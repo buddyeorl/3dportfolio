@@ -57,12 +57,14 @@ class Home extends Component {
 						< Item description={this.props.myBackground} x={this.state.xAbout} y={this.state.yAbout} />
 					</div>
 					<div className="w-50 h-100" Style={"float:left;"}>
-						<div className="pulse"><h1>&darr;&darr;&darr;Scroll Down!!&darr;&darr;&darr;</h1></div>
+						<div className="pulse"> <img src="./assets/img/utils/scrolldown.png" alt="Scroll Down" className="scrollDownImage" /><img src="./assets/img/utils/scrolldown.png" alt="Scroll Down" className="scrollDownImage" /><img src="./assets/img/utils/scrolldown.png" alt="Scroll Down" className="scrollDownImage" /><img src="./assets/img/utils/scrolldown.png" alt="Scroll Down" className="scrollDownImage" /></div>
 
 					</div>
 					<div className="w-25 h-100" Style={"float:left;"}>
 					</div>
 				</section>
+
+				{/* MOBILE HOME PAGE STARTS BELOW */}
 				<div className="mobileHome">
 					<div className="pos-f-t">
 						<div className="collapse" id="navbarToggleExternalContent">
@@ -90,7 +92,7 @@ class Home extends Component {
 					</div>
 					<div className="backgroundText text-white"><h1>{this.props.myName}</h1></div>
 					<div className="backgroundText"><h1>{this.props.myBackground}</h1></div>
-					<div className="pulse"><h1 className="scrollTextMobile" >&darr;&darr;&darr;Scroll Down!!&darr;&darr;&darr;</h1></div>
+					<div className="pulse"><img src="./assets/img/utils/scrolldown.png" alt="Scroll Down" className="scrollDownImage" /></div>
 				</div>
 			</div>
 		);

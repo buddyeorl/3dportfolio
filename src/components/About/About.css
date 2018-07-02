@@ -22,6 +22,12 @@
   display: block;
   top: 50vw;
 }
+.scrollDownImage{
+  color: white;
+  transform:translateY(20vh);
+  height:2vw;
+  width:2vw;
+}
 
 .pulse {
   color: white;
@@ -32,17 +38,26 @@
 }
 
 @keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.1);}
-  100% {transform: scale(1);}
+  0% {transform:translateY(0vh);}
+  50% {transform:translateY(0.8vh);}
+  100% {transform:translateY(0vh);}
 }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
+  .pulse {
+    text-align: center;
+  }
+  .scrollDownImage{
+    color: white;
+    transform:translateY(45vh);
+    height:10vw;
+    width:10vw;
+  }
   @keyframes pulse {
-    0% {transform: scale(0.9);}
-    50% {transform: scale(1);}
-    100% {transform: scale(0.9);}
+    0% {transform:translateY(0vh) scale(1);}
+    50% {transform:translateY(0.8vh) scale(1);}
+    100% {transform:translateY(0vh) scale(1);}
   }
   .About{
     display: none !important;
