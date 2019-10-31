@@ -15,7 +15,7 @@ export const projectDescriptions = ["How many times have you wondered what could
     "Search a set of gifs and click to play or click again to stop playing, who doesn't love gifs anyways?"]
 
 // links for the projects in the same order as projects, add as many as you want.
-export const demoProject = ["https://whatthefork.herokuapp.com/", "http://www.katenna.com", "https://thecodelistener.herokuapp.com/", "https://buddyeorl.github.io/ggj2018/", "https://buddyeorl.github.io/GifTastic/"];
+export const demoProject = ["https://whatthefork.herokuapp.com/", "https://testkatena.herokuapp.com/", "https://thecodelistener.herokuapp.com/", "https://buddyeorl.github.io/ggj2018/", "https://buddyeorl.github.io/GifTastic/"];
 // general list of skills, you can add as many as you want
 export const listOfSkills =
     [
