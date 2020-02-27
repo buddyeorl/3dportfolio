@@ -69,8 +69,9 @@ class Portfolio extends Component {
 						}
 						/>
 					</div>
+					{/* Side Div where tracker will be */}
 					<div className="divPortfolio temporal w-100 h-50">
-						I'm working on a website activity tracker, will leave this text as a reminder. if you think i should remove it, please send me an email or message and I'll reconsider it.
+						{/* I'm working on a website activity tracker, will leave this text as a reminder. if you think i should remove it, please send me an email or message and I'll reconsider it. */}
 					</div>
 				</div>
 				<div className="divPortfolio w-50 h-100">

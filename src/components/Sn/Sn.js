@@ -26,7 +26,7 @@ class Sn extends Component {
 						<div className="sw-100 h-25 p-5">
 							<TransitionRight message=
 								{<h6 className="p-5">Did you like this portfolio??, I've created this portfolio to share it, so please take a look at my
-									open source repo <a href="https://github.com/buddyeorl/3dportfolio" target="_blank">(Github Repo.
+									open source repo <a href="https://github.com/buddyeorl/3dportfolio" target="_blank" rel="noopener noreferrer">(Github Repo.
 									Click Here)</a>, if you like it, please star it, clone it, and share it.</h6>}
 							/>
 						</div>
