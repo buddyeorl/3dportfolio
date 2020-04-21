@@ -1,4 +1,4 @@
-# QUICK REACT PORTFOLIO (NO TITLE YET, BEST TITLE SUGGESTION WILL GET A $5 STARBUCKS GIFT CARD, FOR REAL!)
+# QUICK REACT PORTFOLIO!)
 OK, I was struggling trying to get a decent portfolio and end up creating a fully customizable open source portfolio. This is a full FROM SCRATCH ReactjS portfolio.
 
 ## Ok let's get to the portfolio personalization first. below is the almost self explanatory of the variables (file is located in src/variables/Variables.js) you need to modify in order to get one exact portoflio replica with your information:
